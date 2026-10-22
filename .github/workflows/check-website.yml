@@ -4,11 +4,15 @@ on:
     branches: [main, "finish/**"]
     paths-ignore: ['release/**']
   workflow_dispatch:
+concurrency:
+  group: fitness-website-${{ github.ref }}
+  cancel-in-progress: true
 permissions:
   contents: write
 jobs:
   check-and-package:
     runs-on: ubuntu-latest
+    timeout-minutes: 12
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -31,9 +35,10 @@ jobs:
           trap 'kill "$FCZ_PID"' EXIT
           python3 tests/http-disabled.py
       - name: Mobiele Chromium- en WebKit-controles voorbereiden
+        timeout-minutes: 4
         run: |
-          npm install --prefix "$RUNNER_TEMP/fcz-browser" --package-lock=false --ignore-scripts playwright@1.62.1
-          node "$RUNNER_TEMP/fcz-browser/node_modules/playwright/cli.js" install --with-deps chromium webkit
+          npm install --prefix "$RUNNER_TEMP/fcz-browser" --package-lock=false --ignore-scripts --fetch-retries=1 --fetch-timeout=30000 playwright@1.62.1
+          timeout 180 node "$RUNNER_TEMP/fcz-browser/node_modules/playwright/cli.js" install --with-deps chromium webkit
       - name: Responsive bezoekersroute en formulier testen zonder mail
         run: |
           php -S 127.0.0.1:8090 -t . > /tmp/fcz-responsive.log 2>&1 &
