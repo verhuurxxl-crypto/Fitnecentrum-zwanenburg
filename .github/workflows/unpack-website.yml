@@ -1,0 +1,52 @@
+name: Pak aangeleverde website uit
+on:
+  push:
+    paths:
+      - '.github/workflows/unpack-website.yml'
+permissions:
+  contents: write
+jobs:
+  unpack:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Veilig uitpakken zonder websitecode uit te voeren
+        shell: python
+        run: |
+          import pathlib, zipfile, stat
+          root = pathlib.Path.cwd()
+          archive = root / "Fitnesscentrum-Zwanenburg-Hostinger.zip"
+          with zipfile.ZipFile(archive) as z:
+              entries = [i for i in z.infolist() if not i.is_dir() and not i.filename.startswith("__MACOSX/")]
+              if len(entries) > 3000 or sum(i.file_size for i in entries) > 100_000_000:
+                  raise ValueError("Archief te groot")
+              paths = [pathlib.PurePosixPath(i.filename) for i in entries]
+              prefix = None
+              if paths and all(len(p.parts) > 1 and p.parts[0] == paths[0].parts[0] for p in paths):
+                  prefix = paths[0].parts[0]
+              targets = []
+              for item, p in zip(entries, paths):
+                  if p.is_absolute() or ".." in p.parts or "\\" in item.filename:
+                      raise ValueError("Onveilig bestandspad")
+                  parts = p.parts[1:] if prefix else p.parts
+                  if not parts or any(part in (".git", ".github") for part in parts):
+                      raise ValueError("Beschermd bestandspad")
+                  if stat.S_ISLNK(item.external_attr >> 16):
+                      raise ValueError("Symlink niet toegestaan")
+                  target = root.joinpath(*parts)
+                  if target.exists():
+                      raise ValueError("Bestaand bestand wordt niet overschreven: " + str(target))
+                  targets.append((item, target))
+              for item, target in targets:
+                  target.parent.mkdir(parents=True, exist_ok=True)
+                  target.write_bytes(z.read(item))
+              print(str(len(targets)) + " websitebestanden uitgepakt")
+      - name: Bewaar uitgepakte bestanden
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .
+          if ! git diff --cached --quiet; then
+            git commit -m "Pak aangeleverde fitnesswebsite uit voor verdere bewerking"
+            git push
+          fi
