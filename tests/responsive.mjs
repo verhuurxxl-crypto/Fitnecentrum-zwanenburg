@@ -25,6 +25,12 @@ for (const [engine,type] of Object.entries({chromium,webkit})) {
      assert.deepEqual(layout.bad,[],label+': content buiten beeld');
      if(width>1050)assert.equal(await page.locator('#navigation .mobile-join').isVisible(),false,label+': geen dubbele proeflesknop');
      if(await page.locator('.page-hero h1 br').count())assert.notEqual(await page.locator('.page-hero h1 br').first().evaluate(e=>getComputedStyle(e).display),'none',label+': bewuste regelafbreking zichtbaar');
+     const footerState=await page.locator('footer.fcz-footer').evaluate(e=>({color:getComputedStyle(e).backgroundColor,height:e.getBoundingClientRect().height,display:getComputedStyle(e).display,visibility:getComputedStyle(e).visibility,opacity:getComputedStyle(e).opacity}));
+     assert.equal(footerState.color,'rgb(17, 17, 17)',label+': footer heeft donkere achtergrond');
+     assert.ok(footerState.height>300,label+': footer heeft zichtbare inhoud');
+     assert.notEqual(footerState.display,'none',label+': footer wordt weergegeven');
+     assert.equal(footerState.visibility,'visible',label+': footer zichtbaar');
+     assert.equal(footerState.opacity,'1',label+': footer niet transparant');
      assert.equal(await page.locator('footer a[href="/opzeggen/"]').count(),1,label+': opzegroute');
      assert.equal(await page.locator('footer a[href="tel:+31204978616"]').count(),1,label+': telefoon');
      if(route==='/lesrooster/'){

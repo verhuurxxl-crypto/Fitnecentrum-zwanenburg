@@ -97,3 +97,68 @@ body footer.fcz-footer nav a:after{display:none}
 @media(min-width:1051px) and (pointer:coarse){.mega-panel .mega-column a,.mega-panel .mega-extra a{min-height:44px}}
 /* A filtered header would contain its fixed child and collapse the mobile panel. */
 @media(max-width:1050px){body>header{backdrop-filter:none!important;-webkit-backdrop-filter:none!important}}
+
+/* One consistent footer, independent of header navigation and page templates. */
+body footer.fcz-footer{display:block;position:relative;margin:0;padding:0 6%;width:100%;max-width:none;background:#111;color:#d2c9bc;border:0;overflow-wrap:normal;text-align:left}
+body footer.fcz-footer :is(.fcz-footer-top,.fcz-footer-grid,.fcz-footer-bottom){max-width:1240px;margin-inline:auto;min-width:0;text-align:left}
+body footer.fcz-footer .fcz-footer-top{display:flex;justify-content:space-between;align-items:center;gap:25px;padding:32px 0;border-bottom:1px solid #ffffff21;flex-wrap:wrap}
+body footer.fcz-footer .fcz-footer-top>div{min-width:0}
+body footer.fcz-footer .fcz-footer-top p{font-size:9px;color:#db9b8c;letter-spacing:.13em;line-height:1.6;margin:0 0 9px}
+body footer.fcz-footer .fcz-footer-top h2{font-family:var(--heading);font-size:34px;line-height:1.05;font-weight:700;margin:0;letter-spacing:0;color:#f6f0e7}
+body footer.fcz-footer .button{display:inline-flex;align-items:center;justify-content:space-between;background:#c43129;border:1px solid transparent;color:white;min-height:48px;margin:0;padding:13px 20px;font-size:13px;line-height:1.4;gap:25px;border-radius:2px;white-space:normal}
+body footer.fcz-footer .button:hover{background:#a92721}
+body footer.fcz-footer .button>span{font-size:21px}
+body footer.fcz-footer .fcz-footer-grid{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) minmax(0,1.1fr) minmax(0,1.15fr);grid-template-areas:'brand discover member contact';gap:32px;padding:38px 0 35px;align-items:start;justify-items:stretch;color:inherit}
+body footer.fcz-footer .fcz-footer-brand{grid-area:brand;text-align:left;min-width:0}
+body footer.fcz-footer .fcz-footer-discover{grid-area:discover}
+body footer.fcz-footer .fcz-footer-member{grid-area:member}
+body footer.fcz-footer .fcz-footer-contact{grid-area:contact;text-align:left;min-width:0}
+body footer.fcz-footer .fcz-footer-grid nav{display:flex;position:static;inset:auto;margin:0;padding:0;width:auto;height:auto;min-height:0;max-height:none;flex-direction:column;align-items:flex-start;justify-content:flex-start;gap:0;border:0;box-shadow:none;background:none;overflow:visible;transform:none}
+body footer.fcz-footer h2{font-family:var(--body);font-size:13px;line-height:1.6;font-weight:650;color:#f7f3ec;letter-spacing:0;text-transform:none;margin:3px 0 14px}
+body footer.fcz-footer a{text-align:left;font-size:13px;line-height:1.6;text-shadow:none;letter-spacing:0;overflow-wrap:normal;hyphens:none}
+body footer.fcz-footer nav a{position:relative;display:flex;align-items:center;border:0;min-height:38px;margin:0;padding:7px 0;color:#c9c1b5;font-size:13px;font-weight:400;line-height:1.6;text-decoration:none;background:none}
+body footer.fcz-footer nav a:after{display:none}
+body footer.fcz-footer a:hover{color:#fff}
+body footer.fcz-footer a:focus-visible{outline:2px solid #f48c7d;outline-offset:4px;border-radius:1px}
+body footer.fcz-footer .logo{display:inline-flex;align-items:center;min-height:0;margin:0 0 14px;padding:0}
+body footer.fcz-footer .official-logo{filter:brightness(0) invert(1);width:137px;height:84px;object-fit:contain;max-width:100%}
+body footer.fcz-footer .fcz-footer-brand>p,body footer.fcz-footer .fcz-footer-brand>p:first-of-type{font-size:12px;font-weight:400;line-height:1.9;color:#b8ae9f;margin:0;max-width:30ch}
+body footer.fcz-footer .fcz-footer-social{display:inline-flex;align-items:center;gap:12px;min-height:40px;font-size:11px;color:#d0c4b3;margin-top:8px}
+body footer.fcz-footer address{font-size:13px;font-style:normal;line-height:1.9;color:#c9c1b5;margin:0}
+body footer.fcz-footer .fcz-footer-phone{display:flex;align-items:center;gap:10px;font-size:17px;font-weight:600;line-height:1.5;color:#fff;min-height:44px;margin:6px 0 0;padding:0}
+body footer.fcz-footer .fcz-footer-phone span{font-size:14px;color:#d68b7c}
+body footer.fcz-footer .fcz-footer-visit{display:inline-flex;align-items:center;gap:10px;min-height:38px;font-size:11px;color:#c8bcaa}
+body footer.fcz-footer .fcz-footer-bottom{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px 25px;padding:18px 0 20px;border-top:1px solid #ffffff21;font-size:11px;line-height:1.8;color:#a89c8b}
+body footer.fcz-footer .fcz-footer-bottom nav{display:flex;position:static;inset:auto;flex-direction:row;flex-wrap:wrap;align-items:center;justify-content:flex-start;gap:8px 25px;padding:0;margin:0;width:auto;background:none;box-shadow:none;border:0;transform:none}
+body footer.fcz-footer .fcz-footer-bottom nav a{display:inline-flex;align-items:center;min-height:32px;font-size:11px;padding:3px 0;color:#b7ab99;border:0}
+@media(max-width:1050px){
+ body footer.fcz-footer .fcz-footer-grid{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-areas:'brand contact' 'discover member';gap:30px 12%}
+ body footer.fcz-footer .fcz-footer-grid nav{padding-top:23px;border-top:1px solid #ffffff21}
+ body footer.fcz-footer .fcz-footer-grid nav a{min-height:44px}
+ body footer.fcz-footer .fcz-footer-phone,body footer.fcz-footer .fcz-footer-visit,body footer.fcz-footer .fcz-footer-social{min-height:44px}
+ body footer.fcz-footer .fcz-footer-bottom nav a{min-height:44px}
+}
+@media(max-width:600px){
+ body footer.fcz-footer{padding:0 6%}
+ body footer.fcz-footer .fcz-footer-top{padding:27px 0;gap:20px}
+ body footer.fcz-footer .fcz-footer-top h2{font-size:30px}
+ body footer.fcz-footer .button{font-size:12px;padding:12px 17px;min-height:46px}
+ body footer.fcz-footer .fcz-footer-grid{gap:25px 20px;padding:28px 0 23px;grid-template-columns:repeat(2,minmax(0,1fr))}
+ body footer.fcz-footer .official-logo{width:122px;height:76px}
+ body footer.fcz-footer .logo{margin-bottom:9px}
+ body footer.fcz-footer h2{font-size:12px;margin-bottom:12px;line-height:1.65}
+ body footer.fcz-footer .fcz-footer-grid nav a{font-size:12px;line-height:1.6;min-height:44px;padding:8px 0}
+ body footer.fcz-footer .fcz-footer-brand>p,body footer.fcz-footer .fcz-footer-brand>p:first-of-type{font-size:11px;line-height:1.85}
+ body footer.fcz-footer .fcz-footer-social{font-size:10px;gap:5px;line-height:1.7}
+ body footer.fcz-footer address{font-size:12px;line-height:1.9}
+ body footer.fcz-footer .fcz-footer-phone{font-size:14px;gap:6px}
+ body footer.fcz-footer .fcz-footer-phone span{font-size:12px}
+ body footer.fcz-footer .fcz-footer-visit{font-size:11px;gap:5px}
+ body footer.fcz-footer .fcz-footer-bottom{padding:16px 0 calc(18px + env(safe-area-inset-bottom));gap:5px;font-size:10px}
+ body footer.fcz-footer .fcz-footer-bottom nav{gap:5px 20px;width:100%}
+ body footer.fcz-footer .fcz-footer-bottom nav a{font-size:11px}
+}
+/* The sticky action hides at the footer, so no empty mobile spacer is needed. */
+@media(max-width:600px){body{padding-bottom:0}}
+
+body footer.fcz-footer{visibility:visible;opacity:1;transform:none;isolation:isolate;color-scheme:dark}
