@@ -10,3 +10,13 @@
 .trial-request{scroll-margin-top:110px}.page-hero-copy .trial-fine{font-size:14px}.trial-request-copy h2{font-size:clamp(30px,5vw,60px);overflow-wrap:normal}.trial-form-card select{line-height:1.4}
 @media(max-width:700px){.fcz-steps{grid-template-columns:1fr}.fcz-document{padding-bottom:100px}.trial-request{grid-template-columns:minmax(0,1fr)!important}.trial-form-card{padding:24px!important}.trial-request-copy h2{font-size:clamp(30px,8vw,45px)}.legal-hero .page-hero-copy{padding:32px 20px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}}
+
+/* Readable navigation on the existing dark header, including its mobile panel. */
+body>header{background:#171615;border-bottom-color:#ffffff26}
+body>header .official-logo{filter:brightness(0) invert(1)}
+body>header #navigation>a,body>header #mega-toggle,body>header .menu-toggle{color:#f8f3ea}
+body>header #navigation>a:hover,body>header #mega-toggle:hover{color:#ff9b92}
+body>header .menu-toggle{border-color:#ffffff70}
+.inner-page .page-hero h1{max-width:100%;font-size:clamp(2.2rem,4.5vw,4.6rem);hyphens:none;word-break:normal;overflow-wrap:normal;text-wrap:balance}
+.inner-page h2,.inner-page h3{hyphens:none;word-break:normal}
+@media(max-width:600px){.inner-page .page-hero h1{font-size:clamp(1.85rem,8.6vw,3rem)}}
