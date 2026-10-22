@@ -12,7 +12,7 @@ permissions:
 jobs:
   check-and-package:
     runs-on: ubuntu-latest
-    timeout-minutes: 12
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -37,16 +37,16 @@ jobs:
           trap 'kill "$FCZ_PID"' EXIT
           python3 tests/http-disabled.py
       - name: Mobiele Chromium- en WebKit-controles voorbereiden
-        timeout-minutes: 4
+        timeout-minutes: 5
         run: |
           npm install --prefix "$RUNNER_TEMP/fcz-browser" --package-lock=false --ignore-scripts --fetch-retries=1 --fetch-timeout=30000 playwright@1.62.1
-          timeout 180 node "$RUNNER_TEMP/fcz-browser/node_modules/playwright/cli.js" install --with-deps chromium webkit
+          timeout 240 docker pull mcr.microsoft.com/playwright:v1.62.1-noble
       - name: Responsive bezoekersroute en formulier testen zonder mail
         run: |
           php -S 127.0.0.1:8090 -t . > /tmp/fcz-responsive.log 2>&1 &
           FCZ_BROWSER_PID=$!
           trap 'kill "$FCZ_BROWSER_PID"' EXIT
-          PLAYWRIGHT_MODULE="$RUNNER_TEMP/fcz-browser/node_modules/playwright/index.mjs" node tests/responsive.mjs
+          docker run --rm --network host -v "$PWD:/work" -v "$RUNNER_TEMP/fcz-browser:/pw:ro" -w /work -e PLAYWRIGHT_MODULE=/pw/node_modules/playwright/index.mjs mcr.microsoft.com/playwright:v1.62.1-noble node tests/responsive.mjs
       - uses: actions/upload-artifact@v4
         if: always()
         with:
