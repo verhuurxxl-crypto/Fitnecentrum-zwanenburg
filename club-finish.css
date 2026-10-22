@@ -56,7 +56,7 @@ body footer.fcz-footer nav a:after{display:none}
 .mega-panel .mega-footer>span{display:none}
 .mega-panel .mega-footer>a{min-height:32px;font-size:12px}
 @media(min-width:1051px){
- body>header .mega-panel{display:grid;grid-template-columns:minmax(0,1fr) minmax(240px,390px);gap:17px 24px;left:24px;right:24px;max-width:1240px;margin-inline:auto;padding:18px 24px 0;max-height:calc(100dvh - var(--nav-height,112px) - 25px)}
+ body>header .mega-panel{display:grid;grid-template-columns:minmax(0,1fr) minmax(240px,390px);gap:12px 24px;left:24px;right:24px;max-width:1240px;margin-inline:auto;padding:18px 24px 0;max-height:calc(100dvh - var(--nav-height,112px) - 25px)}
  .mega-panel .mega-top{grid-column:1;align-self:center;margin:0;min-height:44px}
  .mega-panel .mega-close{position:absolute;right:20px;top:18px}
  .mega-panel .site-search{grid-column:2;max-width:none;margin:0 56px 0 0;width:auto;align-self:center}
@@ -65,7 +65,7 @@ body footer.fcz-footer nav a:after{display:none}
  .mega-panel .search-line button{padding:0 14px}
  .mega-panel .mega-grid{grid-column:1/-1;grid-template-columns:1fr 1.12fr .8fr 1.15fr 1.1fr;gap:22px}
  .mega-panel .mega-column>div{gap:0}
- .mega-panel .mega-column a{font-size:12px;min-height:30px;padding:5px 0;line-height:1.4}
+ .mega-panel .mega-column a{font-size:12px;min-height:28px;padding:5px 0;line-height:1.4}
  .mega-panel .mega-extra,.mega-panel .mega-footer{grid-column:1/-1;margin-top:0}
  .mega-panel .mega-extra{padding-top:10px;gap:4px 19px}
  .mega-panel .mega-extra>span{width:auto}
