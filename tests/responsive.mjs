@@ -74,6 +74,7 @@ for (const [engine,type] of Object.entries({chromium,webkit})) {
        assert.ok(dimensions.scroll<=dimensions.height+1,label+': menu zonder intern scrollen');
       }
       if(width<=600){
+       assert.ok(menu.height>=500,label+': mobiel menu heeft bruikbare hoogte '+menu.height);
        assert.equal(await page.locator('.mega-heading-toggle[aria-expanded="true"]').count(),0,label+': categorieën starten compact');
        await page.locator('.mega-heading-toggle').nth(0).click();
        assert.equal(await page.locator('#menu-group-0').isVisible(),true);
@@ -82,6 +83,8 @@ for (const [engine,type] of Object.entries({chromium,webkit})) {
        assert.equal(await page.locator('#menu-group-1').isVisible(),true);
        assert.equal(await page.locator('.mega-heading-toggle[aria-expanded="true"]').count(),1,label+': één categorie tegelijk');
        await page.locator('.mega-heading-toggle').nth(1).click();
+       const afterToggle=await page.locator('#mega-panel').boundingBox();
+       assert.ok(afterToggle.height>=500,label+': hoogte blijft correct na inklappen');
       }
       if(engine==='chromium'&&[375,1366].includes(width))await page.screenshot({path:`test-results/compact-menu-${width}.png`});
       await page.keyboard.press('Escape');

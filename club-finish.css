@@ -95,3 +95,5 @@ body footer.fcz-footer nav a:after{display:none}
  .mega-panel .mega-footer{gap:0;margin-top:10px;padding:7px 0 0}
 }
 @media(min-width:1051px) and (pointer:coarse){.mega-panel .mega-column a,.mega-panel .mega-extra a{min-height:44px}}
+/* A filtered header would contain its fixed child and collapse the mobile panel. */
+@media(max-width:1050px){body>header{backdrop-filter:none!important;-webkit-backdrop-filter:none!important}}
