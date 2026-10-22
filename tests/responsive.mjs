@@ -20,6 +20,7 @@ for (const [engine,type] of Object.entries({chromium,webkit})) {
     await page.locator('h1').waitFor({state:'visible'});
     await page.evaluate(()=>Promise.race([document.fonts.ready,new Promise(r=>setTimeout(r,1500))]));
     const layout=await page.evaluate(()=>({width:innerWidth,scroll:document.documentElement.scrollWidth,bad:[...document.querySelectorAll('main h1,main h2,main h3,main h4,footer h2,footer address,footer a,.fcz-footer-grid,.fcz-membership-page,.fcz-faq-list,body>header .logo,body>header .header-cta,body>header .menu-toggle')].filter(e=>e.getClientRects().length).map(e=>({text:e.textContent.trim().slice(0,60),left:e.getBoundingClientRect().left,right:e.getBoundingClientRect().right})).filter(e=>e.left < -1||e.right>innerWidth+1)}));
+    if(route!=='/')await page.waitForFunction(()=>[...document.querySelectorAll('.fcz-hero-visual img')].every(image=>image.complete&&image.naturalWidth>0));
     if(engine==='chromium'&&[375,1366].includes(width)&&['/aanbod/fitness/','/aanbod/yoga/','/aanbod/kickboksen/','/aanbod/personal-training/','/lesrooster/','/tarieven/','/voorwaarden/','/privacy/','/contact/'].includes(route))await page.screenshot({path:`test-results/hero-${width}-${route.replaceAll('/','_')}.png`,fullPage:false,animations:'disabled'});
     const label=`${engine} ${width} ${route}`;
     try {
@@ -39,7 +40,6 @@ for (const [engine,type] of Object.entries({chromium,webkit})) {
       assert.equal(await page.locator('main .fcz-hero').count(),1,label+': eigen hero');
       const heroImages=page.locator('.fcz-hero-visual img');
       if(await heroImages.count()){
-       await page.waitForFunction(()=>[...document.querySelectorAll('.fcz-hero-visual img')].every(image=>image.complete&&image.naturalWidth>0));
        const photos=await heroImages.evaluateAll(images=>images.map(image=>({src:image.getAttribute('src'),height:image.getBoundingClientRect().height,width:image.getBoundingClientRect().width})));
        assert.ok(photos.every(photo=>photo.height>=100&&photo.width>=50),label+': herofoto’s zichtbaar '+JSON.stringify(photos));
       }
