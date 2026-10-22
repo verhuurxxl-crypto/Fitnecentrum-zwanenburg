@@ -18,7 +18,7 @@ for (const [engine,type] of Object.entries({chromium,webkit})) {
     assert.equal(response.status(),200,`${engine} ${width} ${route}: HTTP`);
     await page.locator('h1').waitFor({state:'visible'});
     await page.evaluate(()=>Promise.race([document.fonts.ready,new Promise(r=>setTimeout(r,1500))]));
-    const layout=await page.evaluate(()=>({width:innerWidth,scroll:document.documentElement.scrollWidth,bad:[...document.querySelectorAll('main h1,main h2,main h3,main h4,.fcz-footer-grid,.fcz-membership-page,.fcz-faq-list,body>header .logo,body>header .header-cta,body>header .menu-toggle')].filter(e=>e.getClientRects().length).map(e=>({text:e.textContent.trim().slice(0,60),left:e.getBoundingClientRect().left,right:e.getBoundingClientRect().right})).filter(e=>e.left < -1||e.right>innerWidth+1)}));
+    const layout=await page.evaluate(()=>({width:innerWidth,scroll:document.documentElement.scrollWidth,bad:[...document.querySelectorAll('main h1,main h2,main h3,main h4,footer h2,footer address,footer a,.fcz-footer-grid,.fcz-membership-page,.fcz-faq-list,body>header .logo,body>header .header-cta,body>header .menu-toggle')].filter(e=>e.getClientRects().length).map(e=>({text:e.textContent.trim().slice(0,60),left:e.getBoundingClientRect().left,right:e.getBoundingClientRect().right})).filter(e=>e.left < -1||e.right>innerWidth+1)}));
     const label=`${engine} ${width} ${route}`;
     try {
      assert.ok(layout.scroll<=layout.width+1,label+': horizontale overflow '+JSON.stringify(layout));
@@ -107,6 +107,7 @@ for (const [engine,type] of Object.entries({chromium,webkit})) {
      throw error;
     }
     if(engine==='chromium'&&[375,1366].includes(width)&&['/','/inschrijven/','/opzeggen/','/gratis-proefles/','/lesrooster/','/tarieven/'].includes(route))await page.screenshot({path:`test-results/${engine}-${width}-${route.replaceAll('/','_')||'home'}.png`,fullPage:true});
+    if(engine==='chromium'&&[375,1366].includes(width)&&route==='/')await page.locator('footer.fcz-footer').screenshot({path:`test-results/footer-${width}.png`});
    }
    await context.close();
   }
