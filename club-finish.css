@@ -162,3 +162,25 @@ body footer.fcz-footer .fcz-footer-bottom nav a{display:inline-flex;align-items:
 @media(max-width:600px){body{padding-bottom:0}}
 
 body footer.fcz-footer{visibility:visible;opacity:1;transform:none;isolation:isolate;color-scheme:dark}
+
+/* Mobile icons share the club's clean linework and red accent. */
+@media(max-width:1050px){
+ body{--fcz-arrow-icon:url('/assets/icons/arrow-up-right.svg');--fcz-chevron-icon:url('/assets/icons/chevron-down.svg')}
+ body :is(.button>span,.card-arrow,.service-arrow,.mega-column a>span,.fcz-footer-social>span,.fcz-footer-phone>span,.fcz-footer-visit>span){font-size:0!important;display:inline-grid;place-items:center;flex-shrink:0;line-height:1}
+ body :is(.button>span,.service-arrow,.mega-column a>span,.fcz-footer-social>span,.fcz-footer-phone>span,.fcz-footer-visit>span){width:20px;height:20px}
+ body :is(.button>span,.card-arrow,.service-arrow,.mega-column a>span,.fcz-footer-social>span,.fcz-footer-phone>span,.fcz-footer-visit>span)::before{content:'';display:block;width:18px;height:18px;background:currentColor;-webkit-mask:var(--fcz-arrow-icon) center/contain no-repeat;mask:var(--fcz-arrow-icon) center/contain no-repeat}
+ body :is(.service-arrow,.mega-column a>span){color:#f36a60;opacity:1}
+ body .card-arrow{border-color:#ffffff70;background:#1114;border-radius:50%}
+ body #mega-toggle>span{display:inline-grid;place-items:center;width:24px;height:24px;font-size:0;color:#f36a60;flex-shrink:0}
+ body #mega-toggle>span::before{content:'';width:18px;height:18px;background:currentColor;-webkit-mask:var(--fcz-chevron-icon) center/contain no-repeat;mask:var(--fcz-chevron-icon) center/contain no-repeat}
+ body :is(.fcz-faq-list,.cancel-faq,.journey-faq,.signup-questions,.terms-toc) summary{list-style:none;display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:44px}
+ body :is(.fcz-faq-list,.cancel-faq,.journey-faq,.signup-questions,.terms-toc) summary::-webkit-details-marker{display:none}
+ body :is(.fcz-faq-list,.cancel-faq,.journey-faq,.signup-questions,.terms-toc) summary::after{content:'';display:block;width:28px;height:28px;flex:0 0 28px;border-radius:50%;background:#a72f28;-webkit-mask:var(--fcz-chevron-icon) center/20px no-repeat;mask:var(--fcz-chevron-icon) center/20px no-repeat;transition:transform .2s ease}
+ body :is(.fcz-faq-list,.cancel-faq,.journey-faq,.signup-questions) details[open]>summary::after,body .terms-toc[open]>summary::after{transform:rotate(180deg)}
+}
+@media(max-width:600px){
+ body .mega-panel .mega-heading-toggle>span{display:grid;place-items:center;flex:0 0 32px;width:32px;height:32px;font-size:0;border:1px solid #f36a6059;border-radius:50%;color:#f36a60;background:#f36a6010;transition:background .2s ease}
+ body .mega-panel .mega-heading-toggle>span::before{content:'';display:block;width:18px;height:18px;background:currentColor;-webkit-mask:var(--fcz-chevron-icon) center/contain no-repeat;mask:var(--fcz-chevron-icon) center/contain no-repeat;transition:transform .2s ease}
+ body .mega-panel .mega-heading-toggle[aria-expanded=true]>span{background:#f36a6024}
+ body .mega-panel .mega-heading-toggle[aria-expanded=true]>span::before{transform:rotate(180deg)}
+}
