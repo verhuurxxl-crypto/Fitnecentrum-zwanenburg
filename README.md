@@ -62,3 +62,8 @@ Opdrachtgever bevestigde in deze sessie €72,50 per maand voor gezinnen en geen
 Bewerk aanvullende prijzen en rooster in `club-data.json` en voer `python3 tests/sync-club.py` uit. Dit werkt de statische HTML op homepage, tarievenpagina en lesrooster bij. CI voorkomt dat deze kopieën uiteenlopen. Het volledige weekrooster werkt ook zonder JavaScript; JavaScript voegt filters per dag en training toe. Elke les verwijst naar de bijbehorende geldige proeflesvoorkeur. Geen aanmelding of beschikbaarheidsreservering via het rooster.
 
 Testuitbreiding: 12 routes in Chromium/WebKit op vier mobiele breedtes en desktop, zeven dagen, alle filters, lege selectie en herstel, prijzen en weekrooster zonder JavaScript. E-mailconfiguratie en gecontroleerde inboxontvangst blijven open.
+
+
+## Vriendelijke opzegpagina — 22 oktober 2026
+
+`/opzeggen/` legt de persoonlijke voorkeursroute uit, met drie stappen, praktische informatie en veelgestelde vragen. Alle footerlinks en bestaande opzegverwijzingen leiden naar deze pagina. Er is geen opzegformulier of automatische verwerking. Geen druk om een reden te geven en geen verzonnen bewaartermijnen of opzegdeadlines. De pagina sluit schriftelijke opzegging of de oorspronkelijke afsluitwijze niet uit: zie ACM, https://www.acm.nl/nl/verkoop-aan-consumenten/klantenservice/annuleren-en-opzeggen. Persoonlijke aanwezigheid, een ledenpas en ontvangst van een bevestiging zijn niet voorgesteld als geldigheidsvoorwaarde.

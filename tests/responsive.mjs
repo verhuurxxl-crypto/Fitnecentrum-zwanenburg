@@ -5,7 +5,7 @@ const {chromium,webkit}=await import(pathToFileURL(process.env.PLAYWRIGHT_MODULE
 const base='http://127.0.0.1:8090';
 await fs.mkdir('test-results',{recursive:true});
 const results=[];
-const routes=['/','/aanbod/','/aanbod/yoga/','/lesrooster/','/tarieven/','/gratis-proefles/','/inschrijven/','/veelgestelde-vragen/','/contact/','/privacy/','/voorwaarden/','/404.html'];
+const routes=['/','/aanbod/','/aanbod/yoga/','/lesrooster/','/tarieven/','/gratis-proefles/','/inschrijven/','/opzeggen/','/veelgestelde-vragen/','/contact/','/privacy/','/voorwaarden/','/404.html'];
 for (const [engine,type] of Object.entries({chromium,webkit})) {
  const browser=await type.launch({headless:true});
  try {
@@ -25,7 +25,7 @@ for (const [engine,type] of Object.entries({chromium,webkit})) {
      assert.deepEqual(layout.bad,[],label+': content buiten beeld');
      if(width>1050)assert.equal(await page.locator('#navigation .mobile-join').isVisible(),false,label+': geen dubbele proeflesknop');
      if(await page.locator('.page-hero h1 br').count())assert.notEqual(await page.locator('.page-hero h1 br').first().evaluate(e=>getComputedStyle(e).display),'none',label+': bewuste regelafbreking zichtbaar');
-     assert.equal(await page.locator('footer a[href="/inschrijven/#opzeggen"]').count(),1,label+': opzegroute');
+     assert.equal(await page.locator('footer a[href="/opzeggen/"]').count(),1,label+': opzegroute');
      assert.equal(await page.locator('footer a[href="tel:+31204978616"]').count(),1,label+': telefoon');
      if(route==='/lesrooster/'){
       await page.locator('#schedule-controls').waitFor({state:'visible'});
@@ -51,6 +51,14 @@ for (const [engine,type] of Object.entries({chromium,webkit})) {
       assert.equal(await page.locator('#lessons .lesson:visible').count(),20);
       await page.locator('#lesson-filter').selectOption('all');
       await page.locator('[data-day="0"]').click();
+     }
+     if(route==='/opzeggen/'){
+      assert.equal(await page.locator('main form').count(),0,label+': geen opzegformulier');
+      await page.getByText('Moet ik vertellen waarom ik stop?',{exact:true}).click();
+      assert.equal(await page.getByText(/Je mag je reden delen als je dat wilt/).isVisible(),true,label+': vriendelijke uitleg leesbaar');
+      await page.getByText('Moet ik vertellen waarom ik stop?',{exact:true}).click();
+      assert.equal(await page.locator('main a[href="/voorwaarden/"]').count(),1,label+': voorwaarden bereikbaar');
+      assert.equal(await page.locator('main a[href="/contact/"]').count(),2,label+': adres en openingstijden');
      }
      if(route==='/tarieven/'){
       assert.match(await page.locator('.club-extra-prices').textContent(),/€72,50/);
@@ -98,7 +106,7 @@ for (const [engine,type] of Object.entries({chromium,webkit})) {
      await fs.writeFile('test-results/failure.json',JSON.stringify({label,layout,error:error.message},null,2));
      throw error;
     }
-    if(engine==='chromium'&&[375,1366].includes(width)&&['/','/inschrijven/','/gratis-proefles/','/lesrooster/','/tarieven/'].includes(route))await page.screenshot({path:`test-results/${engine}-${width}-${route.replaceAll('/','_')||'home'}.png`,fullPage:true});
+    if(engine==='chromium'&&[375,1366].includes(width)&&['/','/inschrijven/','/opzeggen/','/gratis-proefles/','/lesrooster/','/tarieven/'].includes(route))await page.screenshot({path:`test-results/${engine}-${width}-${route.replaceAll('/','_')||'home'}.png`,fullPage:true});
    }
    await context.close();
   }
