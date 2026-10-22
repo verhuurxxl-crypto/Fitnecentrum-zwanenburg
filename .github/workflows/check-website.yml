@@ -1,0 +1,47 @@
+name: Controleer en verpak fitnesswebsite
+on:
+  push:
+    branches: [main]
+    paths-ignore: ['release/**']
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  check-and-package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: HTML en bezoekersroute controleren
+        run: python3 tests/check-site.py
+      - name: JavaScript-syntax controleren
+        run: |
+          for file in *.js; do node --check "$file"; done
+      - name: PHP en veilige mailinhoud controleren
+        run: |
+          php -v
+          find api config tests -name '*.php' -print0 | xargs -0 -n1 php -l
+          php tests/trial.php
+      - name: Uitgeschakelde mailroute controleren zonder verzending
+        run: |
+          php -S 127.0.0.1:8085 -t . > /tmp/fcz-php.log 2>&1 &
+          FCZ_PID=$!
+          trap 'kill "$FCZ_PID"' EXIT
+          python3 tests/http-disabled.py
+      - name: Publiceerbare Hostinger-ZIP maken
+        run: python3 tests/package.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: fitnesscentrum-zwanenburg-hostinger
+          path: release/fitnesscentrum-zwanenburg-hostinger.zip
+      - name: Actuele ZIP bewaren in repository
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add release/fitnesscentrum-zwanenburg-hostinger.zip
+          if ! git diff --cached --quiet; then
+            git commit -m "Werk gecontroleerde Hostinger-ZIP bij"
+            git push
+          fi

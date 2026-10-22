@@ -1,25 +1,8 @@
-FITNESSCENTRUM ZWANENBURG — HOSTINGER PRESENTATIE
-Gebaseerd op de afgeronde ontwerpversie van 9 september 2026.
+FITNESSCENTRUM ZWANENBURG
 
-UPLOADEN
-1. Gebruik een leeg domein of subdomein voor de presentatie. Maak eerst een back-up als er al een website staat.
-2. Upload deze ZIP naar de public_html-map van dat domein/subdomein en pak hem daar uit.
-3. index.html, .htaccess, assets en de paginamappen moeten DIRECT in public_html staan, niet in een extra bovenliggende map.
-4. Open het domein via HTTPS. Er is geen installatie, Node.js, database of bouwstap nodig.
-
-INHOUD
-45 HTML-pagina's, alle stijlen/scripts en 18 Google-clubfoto's plus de bestaande foto's en logo's. Navigatie, zoeken, fotogalerij, keuzehulp, weekplanner en demoformulierstappen blijven beschikbaar.
-
-FORMULIEREN
-Dit is een statische presentatie. Formulieren valideren de invoer en tonen een voorbeeldbevestiging, maar bewaren of versturen niets. Gebruik fictieve gegevens. Het nummer met DEMO- is geen echte aanvraag. E-mail, betaling, ledenadministratie en echte reserveringen zijn niet gekoppeld.
-
-PRESENTATIE EN PUBLICATIE
-Noindex en robots.txt verhinderen gewenste indexering; dit is geen wachtwoordbeveiliging. Wie de URL kent kan de presentatie openen. Stel zo nodig hostingwachtwoordbeveiliging in.
-Links beginnen bij de domeinroot. Upload daarom op een eigen domein/subdomein, niet in een submap van een andere website.
-De canonicals verwijzen nog naar fitnesscentrumzwanenburg.nl. Laat noindex actief tijdens de presentatie.
-Voor officiële ingebruikname: prijzen/rooster/voorwaarden bevestigen, echte aanvraagroute koppelen, privacy afstemmen, gebruik van bezoekersfoto's bevestigen en visueel op iPhone/Safari testen.
-Een agent-side visuele mobiele eindtest was niet mogelijk; de menu-positionering en mobiele code zijn wel nagekeken en aangescherpt.
-Lettertypen worden via Google Fonts geladen; internet is daarvoor nodig. Alle clubafbeeldingen zijn lokaal inbegrepen.
-
-BEWERKEN
-Bewerk de HTML/CSS/JS in deze ZIP rechtstreeks. Deze export bevat geen servercode, accountgegevens of testaanvragen. De online ChatGPT-versie blijft ongewijzigd.
+Lees README.md in GitHub voor installatie en status.
+Upload de inhoud van de actuele release-ZIP rechtstreeks naar public_html.
+Online aanvragen staan uit totdat de private mailconfiguratie is ingesteld.
+Lid worden gebeurt bij de balie; de website bevat geen inschrijfformulier.
+Controleer vóór livegang prijzen, rooster, voorwaarden, privacy, HTTPS en echte e-mailontvangst.
+Noindex blijft actief voor de testwebsite.

@@ -1,0 +1,4 @@
+Options -Indexes
+<FilesMatch "^(trial-lib\.php|interests\.json)$">
+Require all denied
+</FilesMatch>

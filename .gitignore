@@ -1,0 +1,7 @@
+*.sqlite
+*.sqlite-journal
+*.sqlite-wal
+*.sqlite-shm
+fcz-config/
+test-results/
+node_modules/
