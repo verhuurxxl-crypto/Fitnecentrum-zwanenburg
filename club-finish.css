@@ -43,3 +43,55 @@ body footer.fcz-footer nav a:after{display:none}
 .club-extra-amount span{font-size:12px;font-weight:400;white-space:nowrap}
 @media(max-width:700px){.club-extra-prices{grid-template-columns:repeat(2,minmax(0,1fr))}.schedule .lesson{grid-template-columns:83px minmax(0,1fr) 76px;gap:10px}.schedule .lesson h4{font-size:23px}.schedule .lesson-time{font-size:11px}.lesson-time>span{display:block;height:2px;font-size:0}.schedule .days button{font-size:12px;min-width:0;padding:10px 12px}}
 @media(max-width:400px){.club-extra-prices{grid-template-columns:1fr}.club-extra-prices article{padding:20px 0}.schedule .lesson{grid-template-columns:62px minmax(0,1fr) 68px;gap:8px}.schedule .lesson h4{font-size:21px}.schedule .lesson>a{min-width:0;font-size:11px}}
+
+/* Compact offer navigation: one quiet header, five scannable groups. */
+.mega-panel .mega-kicker,.mega-panel .mega-column>p,.mega-panel .mega-column h3:before{display:none}
+.mega-panel .mega-top{border:0;padding:0;margin-bottom:16px;gap:16px}
+.mega-panel .mega-top h2{font-size:25px;margin:0;line-height:1.1}
+.mega-panel .mega-column>div{border:0;padding-top:0}
+.mega-panel .mega-column h3{font-size:13px;padding-bottom:9px}
+.mega-panel .mega-start{background:none;border:0;border-left:1px solid #37322e;border-radius:0;padding:0 0 0 20px}
+.mega-panel .mega-extra{gap:4px 20px;margin-top:15px;padding-top:12px}
+.mega-panel .mega-footer{margin-top:12px;padding:10px 0;gap:15px}
+.mega-panel .mega-footer>span{display:none}
+.mega-panel .mega-footer>a{min-height:32px;font-size:12px}
+@media(min-width:1051px){
+ body>header .mega-panel{display:grid;grid-template-columns:minmax(0,1fr) minmax(240px,390px);gap:17px 24px;left:24px;right:24px;max-width:1240px;margin-inline:auto;padding:18px 24px 0;max-height:calc(100dvh - var(--nav-height,112px) - 25px)}
+ .mega-panel .mega-top{grid-column:1;align-self:center;margin:0;min-height:44px}
+ .mega-panel .mega-close{position:absolute;right:20px;top:18px}
+ .mega-panel .site-search{grid-column:2;max-width:none;margin:0 56px 0 0;width:auto;align-self:center}
+ .mega-panel .site-search label{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+ .mega-panel .search-line input{padding:10px 12px;min-height:42px;font-size:13px}
+ .mega-panel .search-line button{padding:0 14px}
+ .mega-panel .mega-grid{grid-column:1/-1;grid-template-columns:1fr 1.12fr .8fr 1.15fr 1.1fr;gap:22px}
+ .mega-panel .mega-column>div{gap:0}
+ .mega-panel .mega-column a{font-size:12px;min-height:30px;padding:5px 0;line-height:1.4}
+ .mega-panel .mega-extra,.mega-panel .mega-footer{grid-column:1/-1;margin-top:0}
+ .mega-panel .mega-extra{padding-top:10px;gap:4px 19px}
+ .mega-panel .mega-extra>span{width:auto}
+ .mega-panel .mega-extra a{padding:4px 0;min-height:28px}
+ .mega-panel .mega-footer{padding:8px 0}
+}
+@media(max-width:1050px){
+ body>header .mega-panel{padding:18px 20px}
+ .mega-panel .site-search{margin-bottom:18px}
+ .mega-panel .mega-grid{gap:18px 24px}
+ .mega-panel .mega-column h3{font-size:15px}
+ .mega-panel .mega-column a{min-height:44px;font-size:13px}
+ .mega-panel .mega-extra a{min-height:44px}
+ .mega-panel .mega-start{border-left:0;padding:0}
+ .mega-panel .mega-footer>a{min-height:44px}
+}
+@media(max-width:600px){
+ body>header .mega-panel{padding:14px 16px}
+ .mega-panel .mega-top{margin-bottom:12px}
+ .mega-panel .mega-top h2{font-size:23px}
+ .mega-panel .mega-grid{gap:0}
+ .mega-panel .mega-column{padding:0;margin:0;border-bottom:1px solid #37322e}
+ .mega-panel .mega-column h3{padding:0}
+ .mega-panel .mega-heading-toggle{min-height:52px}
+ .mega-panel .mega-column>div{padding-bottom:12px}
+ .mega-panel .mega-extra{margin-top:14px;gap:0 18px}
+ .mega-panel .mega-footer{gap:0;margin-top:10px;padding:7px 0 0}
+}
+@media(min-width:1051px) and (pointer:coarse){.mega-panel .mega-column a,.mega-panel .mega-extra a{min-height:44px}}

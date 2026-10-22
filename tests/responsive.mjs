@@ -68,6 +68,22 @@ for (const [engine,type] of Object.entries({chromium,webkit})) {
       assert.equal(await page.locator('#mega-panel').isVisible(),true,label+': menu open');
       const menu=await page.locator('#mega-panel').boundingBox();
       assert.ok(menu.x>=0&&menu.x+menu.width<=width+1&&menu.y+menu.height<=901,label+': menu past in scherm '+JSON.stringify(menu));
+      if(width>1050){
+       assert.ok(menu.height<=620,label+': compact desktopmenu '+menu.height);
+       const dimensions=await page.locator('#mega-panel').evaluate(e=>({height:e.clientHeight,scroll:e.scrollHeight}));
+       assert.ok(dimensions.scroll<=dimensions.height+1,label+': menu zonder intern scrollen');
+      }
+      if(width<=600){
+       assert.equal(await page.locator('.mega-heading-toggle[aria-expanded="true"]').count(),0,label+': categorieën starten compact');
+       await page.locator('.mega-heading-toggle').nth(0).click();
+       assert.equal(await page.locator('#menu-group-0').isVisible(),true);
+       await page.locator('.mega-heading-toggle').nth(1).click();
+       assert.equal(await page.locator('#menu-group-0').isVisible(),false);
+       assert.equal(await page.locator('#menu-group-1').isVisible(),true);
+       assert.equal(await page.locator('.mega-heading-toggle[aria-expanded="true"]').count(),1,label+': één categorie tegelijk');
+       await page.locator('.mega-heading-toggle').nth(1).click();
+      }
+      if(engine==='chromium'&&[375,1366].includes(width))await page.screenshot({path:`test-results/compact-menu-${width}.png`});
       await page.keyboard.press('Escape');
       assert.equal(await page.locator('#mega-panel').isVisible(),false,label+': Escape sluit');
       assert.equal(await page.evaluate(()=>document.body.classList.contains('menu-open')||document.body.classList.contains('mega-open')),false,label+': scroll hersteld');
