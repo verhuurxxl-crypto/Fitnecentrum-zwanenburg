@@ -44,5 +44,19 @@ for day in club['days']:
   if lesson['interest'] not in interests:errors.append('Onbekende proeflesvoorkeur: '+lesson['interest'])
   if lesson['start']>=lesson['end']:errors.append('Onjuiste lestijd: '+str(lesson))
   if lesson['category'] not in ['jeugd','groep','kick']:errors.append('Onbekend lesfilter')
+heroes=json.loads((root/'hero-pages.json').read_text())
+if len(heroes)!=48:errors.append('Niet alle binnenpagina’s hebben een eigen hero')
+if len({(h['line'],h['accent']) for h in heroes.values()})!=48:errors.append('Dubbele hero-kop')
+for path,hero in heroes.items():
+ page=Page();source=(root/path).read_text();page.feed(source)
+ if f'data-hero="{hero["id"]}"' not in source:errors.append(path+': eigen hero ontbreekt')
+ fragment=re.search(r'<section class="fcz-hero.*?</section>',source,re.S).group()
+ parser=Page();parser.feed(fragment)
+ for link in parser.links:
+  url=urlsplit(link)
+  if url.path=='' and url.fragment and unquote(url.fragment) not in page.ids:errors.append(path+': hero verwijst naar ontbrekend anker '+link)
+  if url.path=='/gratis-proefles/' and url.query:
+   from urllib.parse import parse_qs
+   if parse_qs(url.query).get('interest',[''])[0] not in interests:errors.append(path+': ongeldige trainingsvoorkeur')
 if errors:raise SystemExit('\n'.join(errors))
 print(f'{len(pages)} HTML-pagina’s, interne bestanden, proeflesvelden en {len(interests)-1} trainingsvoorkeuren gecontroleerd.')

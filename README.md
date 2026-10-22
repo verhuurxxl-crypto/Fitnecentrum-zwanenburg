@@ -67,3 +67,12 @@ Testuitbreiding: 12 routes in Chromium/WebKit op vier mobiele breedtes en deskto
 ## Vriendelijke opzegpagina — 22 oktober 2026
 
 `/opzeggen/` legt de persoonlijke voorkeursroute uit, met drie stappen, praktische informatie en veelgestelde vragen. Alle footerlinks en bestaande opzegverwijzingen leiden naar deze pagina. Er is geen opzegformulier of automatische verwerking. Geen druk om een reden te geven en geen verzonnen bewaartermijnen of opzegdeadlines. De pagina sluit schriftelijke opzegging of de oorspronkelijke afsluitwijze niet uit: zie ACM, https://www.acm.nl/nl/verkoop-aan-consumenten/klantenservice/annuleren-en-opzeggen. Persoonlijke aanwezigheid, een ledenpas en ontvangst van een bevestiging zijn niet voorgesteld als geldigheidsvoorwaarde.
+
+
+## Individuele heroes en gestructureerde voorwaarden — 22 oktober 2026
+
+Alle 48 binnenpagina’s hebben een eigen hero, naast de aparte fotografiehero van de homepage. Tekst, beeldkeuze, thema en links staan in `hero-pages.json`; `python3 tests/sync-heroes.py` werkt de statische HTML bij. De foto’s zijn bestaande clubassets met concrete alt-tekst; geen gefingeerde trainingfoto’s of verzonnen teams. Praktische pagina’s hebben onderwerpspecifieke informatieblokken. De hero-link van elke training geeft een geldige, exacte proeflesvoorkeur door.
+
+`terms-content.json` bevat 18 artikelen. `python3 tests/sync-terms.py` genereert de inhoud, kaders en inhoudsopgave van de voorwaardenpagina. De afdrukfunctie gebruikt de printdialoog van de bezoeker. Dit is uitdrukkelijk een nieuwe concepttekst, geen automatische wijziging van bestaande ledencontracten. Nog vast te stellen: juridische contractspartij, KvK, zakelijk contactadres, juridische beoordeling van 24 maanden en definitieve afspraken. Er is geen volledige aansprakelijkheidsuitsluiting, onbevestigde verzekeringslimiet of beperking van wettelijke opzegrechten geïntroduceerd. Bronnen voor controle: ACM algemene voorwaarden, ACM annuleren en opzeggen, Rijksoverheid regels incassokosten.
+
+De CI-controle bezoekt alle 49 routes in Chromium en WebKit op 320/375/390/430/1366 pixels, controleert alle hero-afbeeldingen en genereert screenshots van negen representatieve heroes. Daarnaast blijven de bestaande menu-, footer-, rooster-, voorkeur- en mailtests actief.

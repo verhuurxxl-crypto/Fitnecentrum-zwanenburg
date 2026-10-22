@@ -5,7 +5,8 @@ const {chromium,webkit}=await import(pathToFileURL(process.env.PLAYWRIGHT_MODULE
 const base='http://127.0.0.1:8090';
 await fs.mkdir('test-results',{recursive:true});
 const results=[];
-const routes=['/','/aanbod/','/aanbod/yoga/','/lesrooster/','/tarieven/','/gratis-proefles/','/inschrijven/','/opzeggen/','/veelgestelde-vragen/','/contact/','/privacy/','/voorwaarden/','/404.html'];
+const heroPages=JSON.parse(await fs.readFile('hero-pages.json','utf8'));
+const routes=['/',...Object.keys(heroPages).map(path=>path==='404.html'?'/404.html':'/'+path.replace(/index\.html$/,''))];
 for (const [engine,type] of Object.entries({chromium,webkit})) {
  const browser=await type.launch({headless:true});
  try {
@@ -19,6 +20,7 @@ for (const [engine,type] of Object.entries({chromium,webkit})) {
     await page.locator('h1').waitFor({state:'visible'});
     await page.evaluate(()=>Promise.race([document.fonts.ready,new Promise(r=>setTimeout(r,1500))]));
     const layout=await page.evaluate(()=>({width:innerWidth,scroll:document.documentElement.scrollWidth,bad:[...document.querySelectorAll('main h1,main h2,main h3,main h4,footer h2,footer address,footer a,.fcz-footer-grid,.fcz-membership-page,.fcz-faq-list,body>header .logo,body>header .header-cta,body>header .menu-toggle')].filter(e=>e.getClientRects().length).map(e=>({text:e.textContent.trim().slice(0,60),left:e.getBoundingClientRect().left,right:e.getBoundingClientRect().right})).filter(e=>e.left < -1||e.right>innerWidth+1)}));
+    if(engine==='chromium'&&[375,1366].includes(width)&&['/aanbod/fitness/','/aanbod/yoga/','/aanbod/kickboksen/','/aanbod/personal-training/','/lesrooster/','/tarieven/','/voorwaarden/','/privacy/','/contact/'].includes(route))await page.screenshot({path:`test-results/hero-${width}-${route.replaceAll('/','_')}.png`,fullPage:false,animations:'disabled'});
     const label=`${engine} ${width} ${route}`;
     try {
      assert.ok(layout.scroll<=layout.width+1,label+': horizontale overflow '+JSON.stringify(layout));
@@ -33,6 +35,26 @@ for (const [engine,type] of Object.entries({chromium,webkit})) {
      assert.equal(footerState.opacity,'1',label+': footer niet transparant');
      assert.equal(await page.locator('footer a[href="/opzeggen/"]').count(),1,label+': opzegroute');
      assert.equal(await page.locator('footer a[href="tel:+31204978616"]').count(),1,label+': telefoon');
+     if(route!=='/'){
+      assert.equal(await page.locator('main .fcz-hero').count(),1,label+': eigen hero');
+      const heroImages=page.locator('.fcz-hero-visual img');
+      if(await heroImages.count()){
+       await page.waitForFunction(()=>[...document.querySelectorAll('.fcz-hero-visual img')].every(image=>image.complete&&image.naturalWidth>0));
+       const photos=await heroImages.evaluateAll(images=>images.map(image=>({src:image.getAttribute('src'),height:image.getBoundingClientRect().height,width:image.getBoundingClientRect().width})));
+       assert.ok(photos.every(photo=>photo.height>=100&&photo.width>=50),label+': herofoto’s zichtbaar '+JSON.stringify(photos));
+      }
+      assert.notEqual(await page.locator('.fcz-hero h1 br').evaluate(e=>getComputedStyle(e).display),'none',label+': bewuste kopindeling');
+     }
+     if(route==='/voorwaarden/'){
+      assert.equal(await page.locator('.terms-section').count(),18,label+': volledige voorwaarden');
+      assert.match(await page.locator('.terms-status').textContent(),/Concept ter controle/);
+      assert.equal(await page.locator('#print-terms').isVisible(),true,label+': voorwaarden bewaren');
+      if(width<=900){
+       await page.locator('.terms-toc summary').click();
+       assert.equal(await page.locator('.terms-toc nav').isVisible(),true,label+': inhoud uitklappen');
+       await page.locator('.terms-toc summary').click();
+      }
+     }
      if(route==='/lesrooster/'){
       await page.locator('#schedule-controls').waitFor({state:'visible'});
       assert.equal(await page.locator('#lessons .lesson').count(),37,label+': volledig rooster');

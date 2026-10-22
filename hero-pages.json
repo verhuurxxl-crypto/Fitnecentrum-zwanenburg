@@ -1,0 +1,1426 @@
+{
+  "aanbod/fitness/index.html": {
+    "topic": "Fitness",
+    "line": "Fitness.",
+    "accent": "Op jouw tempo.",
+    "mood": "power",
+    "image": "google-club-01.webp",
+    "tags": [
+      "Jouw schema",
+      "Kracht & conditie",
+      "Gratis proberen"
+    ],
+    "intro": "Werk aan kracht, conditie of gewoon een fijn moment voor jezelf. Op de fitnessvloer train je in je eigen tempo. We helpen je graag de weg te vinden tijdens je gratis proeftraining.",
+    "primary": [
+      "/gratis-proefles/?interest=fitness",
+      "Probeer deze training gratis"
+    ],
+    "secondary": [
+      "/lesrooster/",
+      "Bekijk het lesrooster"
+    ],
+    "visual": "photo",
+    "caption": "Fitness bij FCZ",
+    "category": "TRAINING & AANDACHT",
+    "id": "aanbod/fitness",
+    "number": "01",
+    "alt": "De rode fitnessruimte met krachtapparatuur bij FCZ",
+    "position": "50% 50%",
+    "width": 680,
+    "height": 510
+  },
+  "aanbod/open-gym/index.html": {
+    "topic": "Open gym",
+    "line": "Jouw training.",
+    "accent": "Alle ruimte.",
+    "mood": "power",
+    "image": "google-club-12.webp",
+    "tags": [
+      "Zelfstandig trainen",
+      "Eigen ritme",
+      "Jouw doel"
+    ],
+    "intro": "Jouw oefeningen, jouw ritme. Ontdek de ruimte om zelfstandig te trainen en bespreek welke trainingsvloer bij je past. Kom gratis kennismaken met de club.",
+    "primary": [
+      "/gratis-proefles/?interest=open-gym",
+      "Probeer deze training gratis"
+    ],
+    "secondary": [
+      "/lesrooster/",
+      "Bekijk het lesrooster"
+    ],
+    "visual": "photo",
+    "caption": "Open gym bij FCZ",
+    "category": "TRAINING & AANDACHT",
+    "id": "aanbod/open-gym",
+    "number": "02",
+    "alt": "Een rij halters in de fitnessruimte van FCZ",
+    "position": "50% 50%",
+    "width": 680,
+    "height": 313
+  },
+  "aanbod/strength-conditioning/index.html": {
+    "topic": "Strength & conditioning",
+    "line": "Sterker worden.",
+    "accent": "Verder kunnen.",
+    "mood": "power",
+    "image": "google-club-20.webp",
+    "tags": [
+      "Kracht",
+      "Conditie",
+      "Samen trainen"
+    ],
+    "intro": "Combineer kracht en conditie in een afwisselende training. We bespreken je ervaring en helpen je een passende groep te vinden. Probeer het tijdens een gratis kennismaking.",
+    "primary": [
+      "/gratis-proefles/?interest=strength-conditioning",
+      "Probeer deze training gratis"
+    ],
+    "secondary": [
+      "/lesrooster/",
+      "Bekijk het lesrooster"
+    ],
+    "visual": "photo",
+    "caption": "Strength & conditioning bij FCZ",
+    "category": "TRAINING & AANDACHT",
+    "id": "aanbod/strength-conditioning",
+    "number": "03",
+    "alt": "Een halterstang met gewichten in de club",
+    "position": "50% 50%",
+    "width": 382,
+    "height": 510
+  },
+  "aanbod/crossfit/index.html": {
+    "topic": "Crossfit",
+    "line": "Een nieuwe uitdaging.",
+    "accent": "Elke training weer.",
+    "mood": "combat",
+    "image": "google-club-11.webp",
+    "tags": [
+      "Afwisseling",
+      "Kracht",
+      "Techniek"
+    ],
+    "intro": "Houd je van afwisseling en een uitdaging? Ontdek Crossfit bij de club en bespreek welke training bij jouw ervaring past. Je eerste kennismaking is gratis.",
+    "primary": [
+      "/gratis-proefles/?interest=crossfit",
+      "Probeer deze training gratis"
+    ],
+    "secondary": [
+      "/lesrooster/",
+      "Bekijk het lesrooster"
+    ],
+    "visual": "photo",
+    "caption": "Crossfit bij FCZ",
+    "category": "TRAINING & AANDACHT",
+    "id": "aanbod/crossfit",
+    "number": "04",
+    "alt": "Een sporter tijdens een krachtoefening in de club",
+    "position": "50% 50%",
+    "width": 382,
+    "height": 510
+  },
+  "aanbod/personal-training/index.html": {
+    "topic": "Personal training",
+    "line": "Jouw doel.",
+    "accent": "Persoonlijke aandacht.",
+    "mood": "people",
+    "image": "google-club-07.webp",
+    "tags": [
+      "Kennismaken",
+      "Doelen bespreken",
+      "Begeleiding"
+    ],
+    "intro": "Persoonlijke aandacht begint met jouw verhaal. Bespreek je doelen, stel je vragen en ontdek welke begeleiding bij je past. Vraag een gratis kennismaking aan; eventuele vervolgkosten spreken we vooraf af.",
+    "primary": [
+      "/gratis-proefles/?interest=personal-training",
+      "Probeer deze training gratis"
+    ],
+    "secondary": [
+      "/lesrooster/",
+      "Bekijk het lesrooster"
+    ],
+    "visual": "photo",
+    "caption": "Personal training bij FCZ",
+    "category": "TRAINING & AANDACHT",
+    "id": "aanbod/personal-training",
+    "number": "05",
+    "alt": "Persoonlijke begeleiding bij een oefening in de club",
+    "position": "58% 45%",
+    "width": 680,
+    "height": 453
+  },
+  "aanbod/bedrijfsfitness/index.html": {
+    "topic": "Bedrijfsfitness",
+    "line": "Samen werken.",
+    "accent": "Samen bewegen.",
+    "mood": "people",
+    "image": "google-club-10.webp",
+    "tags": [
+      "Voor jouw team",
+      "Persoonlijk overleg",
+      "Tarief op aanvraag"
+    ],
+    "intro": "Maak ruimte voor beweging naast je werk. Ontdek de mogelijkheden om via je werkgever te sporten en kom de club gratis ervaren. De afspraken voor je bedrijf bespreken we persoonlijk.",
+    "primary": [
+      "/gratis-proefles/?interest=bedrijfsfitness",
+      "Probeer deze training gratis"
+    ],
+    "secondary": [
+      "/lesrooster/",
+      "Bekijk het lesrooster"
+    ],
+    "visual": "photo",
+    "caption": "Bedrijfsfitness bij FCZ",
+    "category": "TRAINING & AANDACHT",
+    "id": "aanbod/bedrijfsfitness",
+    "number": "06",
+    "alt": "Drie medewerkers voor de ingang van Fitnesscentrum Zwanenburg",
+    "position": "50% 50%",
+    "width": 680,
+    "height": 453
+  },
+  "aanbod/bodyshape/index.html": {
+    "topic": "Bodyshape",
+    "line": "Beweeg samen.",
+    "accent": "Voel de energie.",
+    "mood": "flow",
+    "image": "google-club-18.webp",
+    "tags": [
+      "Groepsles",
+      "Afwisseling",
+      "Op jouw niveau"
+    ],
+    "intro": "Samen bewegen, energie opdoen en tijd maken voor jezelf. Ontdek Bodyshape tijdens een gratis proeftraining. We stemmen een geschikt lesmoment met je af.",
+    "primary": [
+      "/gratis-proefles/?interest=bodyshape",
+      "Probeer deze training gratis"
+    ],
+    "secondary": [
+      "/lesrooster/",
+      "Bekijk het lesrooster"
+    ],
+    "visual": "photo",
+    "caption": "Bodyshape bij FCZ",
+    "category": "TRAINING & AANDACHT",
+    "id": "aanbod/bodyshape",
+    "number": "07",
+    "alt": "Een lichte trainingszaal met grote ramen bij FCZ",
+    "position": "50% 50%",
+    "width": 680,
+    "height": 313
+  },
+  "aanbod/bodypump/index.html": {
+    "topic": "Bodypump",
+    "line": "Pak die kracht.",
+    "accent": "Samen in beweging.",
+    "mood": "power",
+    "image": "DSC_2607-2-1024x678.jpg",
+    "tags": [
+      "Krachttraining",
+      "Groepsles",
+      "Gratis kennismaken"
+    ],
+    "intro": "Krachttraining met de energie van een groep. Maak kennis met Bodypump en ontdek of de les bij je past. Je hoeft nog geen lid te zijn om gratis mee te proberen.",
+    "primary": [
+      "/gratis-proefles/?interest=bodypump",
+      "Probeer deze training gratis"
+    ],
+    "secondary": [
+      "/lesrooster/",
+      "Bekijk het lesrooster"
+    ],
+    "visual": "photo",
+    "caption": "Bodypump bij FCZ",
+    "category": "TRAINING & AANDACHT",
+    "id": "aanbod/bodypump",
+    "number": "08",
+    "alt": "De groepsruimte van FCZ met kettlebells voor de ramen",
+    "position": "50% 50%",
+    "width": 1024,
+    "height": 678
+  },
+  "aanbod/combi-shape/index.html": {
+    "topic": "Combi shape",
+    "line": "Lekker afwisselen.",
+    "accent": "Samen aan de slag.",
+    "mood": "flow",
+    "image": "google-club-06.webp",
+    "tags": [
+      "Kracht & beweging",
+      "Groepsles",
+      "Jouw tempo"
+    ],
+    "intro": "Voor wie graag afwisseling in de training heeft. Kom Combi shape ontdekken, maak kennis met de groep en ervaar de sfeer tijdens een gratis proefles.",
+    "primary": [
+      "/gratis-proefles/?interest=combi-shape",
+      "Probeer deze training gratis"
+    ],
+    "secondary": [
+      "/lesrooster/",
+      "Bekijk het lesrooster"
+    ],
+    "visual": "photo",
+    "caption": "Combi shape bij FCZ",
+    "category": "TRAINING & AANDACHT",
+    "id": "aanbod/combi-shape",
+    "number": "09",
+    "alt": "Een ruime trainingszaal bij Fitnesscentrum Zwanenburg",
+    "position": "50% 50%",
+    "width": 680,
+    "height": 314
+  },
+  "aanbod/circuit-training/index.html": {
+    "topic": "Circuit training",
+    "line": "Een ronde verder.",
+    "accent": "Een stap voor jezelf.",
+    "mood": "power",
+    "image": "google-club-15.webp",
+    "tags": [
+      "Verschillende oefeningen",
+      "Samen trainen",
+      "Conditie & kracht"
+    ],
+    "intro": "Een nieuwe oefening, een nieuwe ronde energie. Ontdek Circuit training en train mee op een niveau dat bij je past. Vraag je gratis proeftraining aan.",
+    "primary": [
+      "/gratis-proefles/?interest=circuit-training",
+      "Probeer deze training gratis"
+    ],
+    "secondary": [
+      "/lesrooster/",
+      "Bekijk het lesrooster"
+    ],
+    "visual": "photo",
+    "caption": "Circuit training bij FCZ",
+    "category": "TRAINING & AANDACHT",
+    "id": "aanbod/circuit-training",
+    "number": "10",
+    "alt": "Halters en trainingsmateriaal op het dakterras van FCZ",
+    "position": "50% 50%",
+    "width": 680,
+    "height": 314
+  },
+  "aanbod/buikspierkwartier/index.html": {
+    "topic": "Buikspierkwartier",
+    "line": "Even de focus.",
+    "accent": "Op jouw core.",
+    "mood": "flow",
+    "image": "DSC_2607-2-1024x678.jpg",
+    "tags": [
+      "Gerichte oefeningen",
+      "Bewust bewegen",
+      "Vraag naar lesmomenten"
+    ],
+    "intro": "Een kort moment met aandacht voor je training. Ontdek hoe het buikspierkwartier in jouw sportweek past en bespreek met de club wanneer je kunt aansluiten.",
+    "primary": [
+      "/gratis-proefles/?interest=buikspierkwartier",
+      "Probeer deze training gratis"
+    ],
+    "secondary": [
+      "/lesrooster/",
+      "Bekijk het lesrooster"
+    ],
+    "visual": "photo",
+    "caption": "Buikspierkwartier bij FCZ",
+    "category": "TRAINING & AANDACHT",
+    "id": "aanbod/buikspierkwartier",
+    "number": "11",
+    "alt": "De groepsruimte van FCZ met kettlebells voor de ramen",
+    "position": "50% 50%",
+    "width": 1024,
+    "height": 678
+  },
+  "aanbod/spinning/index.html": {
+    "topic": "Spinning",
+    "line": "Vind je ritme.",
+    "accent": "Geef energie.",
+    "mood": "combat",
+    "image": "google-club-03.webp",
+    "tags": [
+      "Groepsles",
+      "Conditie",
+      "Samen doorgaan"
+    ],
+    "intro": "Samen op de fiets, ieder op zijn eigen tempo. Ervaar de energie van Spinning tijdens een gratis proefles. We stemmen vooraf het lesmoment met je af.",
+    "primary": [
+      "/gratis-proefles/?interest=spinning",
+      "Probeer deze training gratis"
+    ],
+    "secondary": [
+      "/lesrooster/",
+      "Bekijk het lesrooster"
+    ],
+    "visual": "photo",
+    "caption": "Spinning bij FCZ",
+    "category": "TRAINING & AANDACHT",
+    "id": "aanbod/spinning",
+    "number": "12",
+    "alt": "Fitnessapparatuur in een trainingsruimte van FCZ",
+    "position": "50% 50%",
+    "width": 680,
+    "height": 510
+  },
+  "aanbod/zumba/index.html": {
+    "topic": "Zumba / Zumba bootcamp",
+    "line": "Muziek aan.",
+    "accent": "Jij in beweging.",
+    "mood": "flow",
+    "image": "google-club-18.webp",
+    "tags": [
+      "Ritme",
+      "Groepsenergie",
+      "Plezier in bewegen"
+    ],
+    "intro": "Bewegen op muziek en met plezier trainen. Ontdek welke Zumba-les bij je past en kom de sfeer gratis ervaren. Je bent ook welkom als het je eerste keer is.",
+    "primary": [
+      "/gratis-proefles/?interest=zumba",
+      "Probeer deze training gratis"
+    ],
+    "secondary": [
+      "/lesrooster/",
+      "Bekijk het lesrooster"
+    ],
+    "visual": "photo",
+    "caption": "Zumba / Zumba bootcamp bij FCZ",
+    "category": "TRAINING & AANDACHT",
+    "id": "aanbod/zumba",
+    "number": "13",
+    "alt": "Een lichte trainingszaal met grote ramen bij FCZ",
+    "position": "50% 50%",
+    "width": 680,
+    "height": 313
+  },
+  "aanbod/yoga/index.html": {
+    "topic": "Yoga",
+    "line": "Ruimte om te bewegen.",
+    "accent": "Tijd voor jezelf.",
+    "mood": "flow",
+    "image": "DSC_2607-2-1024x678.jpg",
+    "tags": [
+      "Aandacht",
+      "Beweging",
+      "Eigen tempo"
+    ],
+    "intro": "Maak tijd voor beweging en aandacht voor jezelf. Ontdek de yogales in de club en bespreek welke lesvorm bij je past. Kom gratis kennismaken.",
+    "primary": [
+      "/gratis-proefles/?interest=yoga",
+      "Probeer deze training gratis"
+    ],
+    "secondary": [
+      "/lesrooster/",
+      "Bekijk het lesrooster"
+    ],
+    "visual": "photo",
+    "caption": "Yoga bij FCZ",
+    "category": "TRAINING & AANDACHT",
+    "id": "aanbod/yoga",
+    "number": "14",
+    "alt": "De groepsruimte van FCZ met kettlebells voor de ramen",
+    "position": "50% 50%",
+    "width": 1024,
+    "height": 678
+  },
+  "aanbod/pilates/index.html": {
+    "topic": "Pilates",
+    "line": "Bewust bewegen.",
+    "accent": "Met aandacht.",
+    "mood": "flow",
+    "image": "google-club-18.webp",
+    "tags": [
+      "Controle",
+      "Houding",
+      "Gerichte beweging"
+    ],
+    "intro": "Train met aandacht voor je beweging. Ervaar Pilates in een groep en ontdek of de les aansluit bij jouw wensen. Je eerste kennismaking is gratis.",
+    "primary": [
+      "/gratis-proefles/?interest=pilates",
+      "Probeer deze training gratis"
+    ],
+    "secondary": [
+      "/lesrooster/",
+      "Bekijk het lesrooster"
+    ],
+    "visual": "photo",
+    "caption": "Pilates bij FCZ",
+    "category": "TRAINING & AANDACHT",
+    "id": "aanbod/pilates",
+    "number": "15",
+    "alt": "Een lichte trainingszaal met grote ramen bij FCZ",
+    "position": "50% 50%",
+    "width": 680,
+    "height": 313
+  },
+  "aanbod/pole-fitness/index.html": {
+    "topic": "Pole fitness",
+    "line": "Ontdek je kracht.",
+    "accent": "Verleg je grenzen.",
+    "mood": "flow",
+    "image": "google-club-06.webp",
+    "tags": [
+      "Techniek",
+      "Kracht",
+      "Vraag naar de mogelijkheden"
+    ],
+    "intro": "Benieuwd naar een andere manier van trainen? Ontdek Pole fitness en bespreek je ervaring en het instapniveau met de club. We helpen je graag je eerste les af te stemmen.",
+    "primary": [
+      "/gratis-proefles/?interest=pole-fitness",
+      "Probeer deze training gratis"
+    ],
+    "secondary": [
+      "/lesrooster/",
+      "Bekijk het lesrooster"
+    ],
+    "visual": "photo",
+    "caption": "Pole fitness bij FCZ",
+    "category": "TRAINING & AANDACHT",
+    "id": "aanbod/pole-fitness",
+    "number": "16",
+    "alt": "Een ruime trainingszaal bij Fitnesscentrum Zwanenburg",
+    "position": "50% 50%",
+    "width": 680,
+    "height": 314
+  },
+  "aanbod/kickboksen/index.html": {
+    "topic": "Kickboksen",
+    "line": "Focus op techniek.",
+    "accent": "Voel je kracht.",
+    "mood": "combat",
+    "image": "google-club-09.webp",
+    "tags": [
+      "Techniek",
+      "Conditie",
+      "Respect"
+    ],
+    "intro": "Focus, techniek en energie komen samen. Maak kennis met kickboksen en ontdek welke groep past bij je leeftijd en ervaring. Vraag een gratis proeftraining aan.",
+    "primary": [
+      "/gratis-proefles/?interest=kickboksen",
+      "Probeer deze training gratis"
+    ],
+    "secondary": [
+      "/lesrooster/",
+      "Bekijk het lesrooster"
+    ],
+    "visual": "photo",
+    "caption": "Kickboksen bij FCZ",
+    "category": "TRAINING & AANDACHT",
+    "id": "aanbod/kickboksen",
+    "number": "17",
+    "alt": "Een trainingszaal met bokszakken bij FCZ",
+    "position": "50% 50%",
+    "width": 680,
+    "height": 313
+  },
+  "aanbod/zaktraining/index.html": {
+    "topic": "Zaktraining",
+    "line": "Jouw energie.",
+    "accent": "Jouw uitlaatklep.",
+    "mood": "combat",
+    "image": "google-club-16.webp",
+    "tags": [
+      "Stoten & trappen",
+      "Conditie",
+      "Focus"
+    ],
+    "intro": "Geef je energie de ruimte. Ontdek zaktraining als onderdeel van het vechtsportaanbod. We stemmen je eerste moment en de benodigde materialen vooraf met je af.",
+    "primary": [
+      "/gratis-proefles/?interest=zaktraining",
+      "Probeer deze training gratis"
+    ],
+    "secondary": [
+      "/lesrooster/",
+      "Bekijk het lesrooster"
+    ],
+    "visual": "photo",
+    "caption": "Zaktraining bij FCZ",
+    "category": "TRAINING & AANDACHT",
+    "id": "aanbod/zaktraining",
+    "number": "18",
+    "alt": "Een bokszak en trainingsmateriaal op het dakterras van FCZ",
+    "position": "50% 50%",
+    "width": 680,
+    "height": 314
+  },
+  "aanbod/mma/index.html": {
+    "topic": "MMA",
+    "line": "Blijf leren.",
+    "accent": "Blijf groeien.",
+    "mood": "combat",
+    "image": "google-club-09.webp",
+    "tags": [
+      "Vechtsport",
+      "Techniek",
+      "Vraag naar de groep"
+    ],
+    "intro": "Ontdek de veelzijdigheid van MMA. Bespreek je ervaring, maak kennis met de trainer en kijk welke groep bij je past. Je eerste kennismaking is gratis.",
+    "primary": [
+      "/gratis-proefles/?interest=mma",
+      "Probeer deze training gratis"
+    ],
+    "secondary": [
+      "/lesrooster/",
+      "Bekijk het lesrooster"
+    ],
+    "visual": "photo",
+    "caption": "MMA bij FCZ",
+    "category": "TRAINING & AANDACHT",
+    "id": "aanbod/mma",
+    "number": "19",
+    "alt": "Een trainingszaal met bokszakken bij FCZ",
+    "position": "50% 50%",
+    "width": 680,
+    "height": 313
+  },
+  "aanbod/taekwondo/index.html": {
+    "topic": "Taekwondo",
+    "line": "Met respect.",
+    "accent": "Met overtuiging.",
+    "mood": "combat",
+    "image": "google-club-16.webp",
+    "tags": [
+      "Discipline",
+      "Techniek",
+      "Persoonlijke groei"
+    ],
+    "intro": "Ontdek een sport met aandacht voor techniek en bewegen. Vraag een gratis proefles aan en bespreek met de club welke groep aansluit bij je leeftijd en ervaring.",
+    "primary": [
+      "/gratis-proefles/?interest=taekwondo",
+      "Probeer deze training gratis"
+    ],
+    "secondary": [
+      "/lesrooster/",
+      "Bekijk het lesrooster"
+    ],
+    "visual": "photo",
+    "caption": "Taekwondo bij FCZ",
+    "category": "TRAINING & AANDACHT",
+    "id": "aanbod/taekwondo",
+    "number": "20",
+    "alt": "Een bokszak en trainingsmateriaal op het dakterras van FCZ",
+    "position": "50% 50%",
+    "width": 680,
+    "height": 314
+  },
+  "aanbod/jeugd-fitness/index.html": {
+    "topic": "Jeugd fitness · 8–15 jaar",
+    "line": "Jong beginnen.",
+    "accent": "Met plezier bewegen.",
+    "mood": "people",
+    "image": "google-club-01.webp",
+    "tags": [
+      "8–15 jaar",
+      "Passende begeleiding",
+      "Via ouder of verzorger"
+    ],
+    "intro": "Een sportieve kennismaking voor de jeugd. Kom samen ontdekken welke begeleiding en groep passen. Een ouder of verzorger vraagt de gratis proeftraining aan.",
+    "primary": [
+      "/gratis-proefles/?interest=jeugd-fitness",
+      "Probeer deze training gratis"
+    ],
+    "secondary": [
+      "/lesrooster/",
+      "Bekijk het lesrooster"
+    ],
+    "visual": "photo",
+    "caption": "Jeugd fitness · 8–15 jaar bij FCZ",
+    "category": "TRAINING & AANDACHT",
+    "id": "aanbod/jeugd-fitness",
+    "number": "21",
+    "alt": "De rode fitnessruimte met krachtapparatuur bij FCZ",
+    "position": "50% 50%",
+    "width": 680,
+    "height": 510
+  },
+  "aanbod/jeugd-kickboksen/index.html": {
+    "topic": "Jeugd kickboksen",
+    "line": "Energie kwijt.",
+    "accent": "Nieuwe dingen leren.",
+    "mood": "combat",
+    "image": "google-club-09.webp",
+    "tags": [
+      "Respect",
+      "Techniek",
+      "Passende jeugdgroep"
+    ],
+    "intro": "Samen bewegen en stap voor stap kennismaken met kickboksen. We bespreken met een ouder of verzorger welke leeftijdsgroep en training passend zijn.",
+    "primary": [
+      "/gratis-proefles/?interest=jeugd-kickboksen",
+      "Probeer deze training gratis"
+    ],
+    "secondary": [
+      "/lesrooster/",
+      "Bekijk het lesrooster"
+    ],
+    "visual": "photo",
+    "caption": "Jeugd kickboksen bij FCZ",
+    "category": "TRAINING & AANDACHT",
+    "id": "aanbod/jeugd-kickboksen",
+    "number": "22",
+    "alt": "Een trainingszaal met bokszakken bij FCZ",
+    "position": "50% 50%",
+    "width": 680,
+    "height": 313
+  },
+  "aanbod/jeugd-strength/index.html": {
+    "topic": "Jeugd strength & conditioning",
+    "line": "Samen ontdekken.",
+    "accent": "Samen sterker.",
+    "mood": "people",
+    "image": "google-club-15.webp",
+    "tags": [
+      "Bewegen",
+      "Techniek leren",
+      "Passende jeugdgroep"
+    ],
+    "intro": "Ontdek kracht en conditie met leeftijdsgenoten. De club bespreekt met een ouder of verzorger welke groep en begeleiding passen bij de eerste kennismaking.",
+    "primary": [
+      "/gratis-proefles/?interest=jeugd-strength",
+      "Probeer deze training gratis"
+    ],
+    "secondary": [
+      "/lesrooster/",
+      "Bekijk het lesrooster"
+    ],
+    "visual": "photo",
+    "caption": "Jeugd strength & conditioning bij FCZ",
+    "category": "TRAINING & AANDACHT",
+    "id": "aanbod/jeugd-strength",
+    "number": "23",
+    "alt": "Halters en trainingsmateriaal op het dakterras van FCZ",
+    "position": "50% 50%",
+    "width": 680,
+    "height": 314
+  },
+  "aanbod/senioren/index.html": {
+    "topic": "Senioren / 55+",
+    "line": "Blijf in beweging.",
+    "accent": "Op jouw manier.",
+    "mood": "people",
+    "image": "google-club-13.webp",
+    "tags": [
+      "Persoonlijke aandacht",
+      "Eigen tempo",
+      "Prettig bewegen"
+    ],
+    "intro": "Blijf bewegen op een manier die bij jou past. Bespreek je wensen en ontdek de mogelijkheden voor seniorentraining. Je bent welkom voor een gratis kennismaking.",
+    "primary": [
+      "/gratis-proefles/?interest=senioren",
+      "Probeer deze training gratis"
+    ],
+    "secondary": [
+      "/lesrooster/",
+      "Bekijk het lesrooster"
+    ],
+    "visual": "photo",
+    "caption": "Senioren / 55+ bij FCZ",
+    "category": "TRAINING & AANDACHT",
+    "id": "aanbod/senioren",
+    "number": "24",
+    "alt": "Een trainer en sporter bij Fitnesscentrum Zwanenburg",
+    "position": "50% 30%",
+    "width": 382,
+    "height": 510
+  },
+  "aanbod/fysiotherapie/index.html": {
+    "topic": "Fysiotherapie",
+    "line": "Een vraag over bewegen?",
+    "accent": "Bespreek het persoonlijk.",
+    "mood": "people",
+    "image": "google-club-07.webp",
+    "tags": [
+      "Vraag naar de behandelaar",
+      "Afspraak in overleg",
+      "Geen gratis proefbehandeling"
+    ],
+    "intro": "Fysiotherapie is onderdeel van de faciliteiten. Neem contact op met de club om je te laten doorverwijzen naar de praktijk voor informatie of een afspraak.",
+    "primary": [
+      "/contact/",
+      "Vraag naar de mogelijkheden"
+    ],
+    "secondary": [
+      "/faciliteiten/",
+      "Alle faciliteiten"
+    ],
+    "visual": "photo",
+    "caption": "Fysiotherapie bij FCZ",
+    "category": "MEER BIJ DE CLUB",
+    "id": "aanbod/fysiotherapie",
+    "number": "25",
+    "alt": "Persoonlijke begeleiding bij een oefening in de club",
+    "position": "58% 45%",
+    "width": 680,
+    "height": 453
+  },
+  "aanbod/health-check/index.html": {
+    "topic": "Health check",
+    "line": "Even stilstaan.",
+    "accent": "Bij jouw vertrekpunt.",
+    "mood": "people",
+    "image": "google-club-13.webp",
+    "tags": [
+      "Persoonlijk overleg",
+      "Inhoud vooraf bespreken",
+      "Tarieven in de club"
+    ],
+    "intro": "Bespreek de mogelijkheden voor een health check. Vraag wat deze inhoudt, wie de check uitvoert en welke afspraken en eventuele kosten gelden.",
+    "primary": [
+      "/contact/",
+      "Vraag naar de mogelijkheden"
+    ],
+    "secondary": [
+      "/faciliteiten/",
+      "Alle faciliteiten"
+    ],
+    "visual": "photo",
+    "caption": "Health check bij FCZ",
+    "category": "MEER BIJ DE CLUB",
+    "id": "aanbod/health-check",
+    "number": "26",
+    "alt": "Een trainer en sporter bij Fitnesscentrum Zwanenburg",
+    "position": "50% 30%",
+    "width": 382,
+    "height": 510
+  },
+  "aanbod/zonnebank/index.html": {
+    "topic": "Zonnebank",
+    "line": "Een extra faciliteit.",
+    "accent": "Duidelijke afspraken.",
+    "mood": "quiet",
+    "image": "google-club-03.webp",
+    "tags": [
+      "Gebruik in overleg",
+      "Vraag naar beschikbaarheid",
+      "Voorwaarden & tarieven"
+    ],
+    "intro": "Een zonnebank wordt vermeld bij de faciliteiten. Vraag de club naar beschikbaarheid, gebruiksvoorwaarden en tarieven.",
+    "primary": [
+      "/contact/",
+      "Vraag naar de mogelijkheden"
+    ],
+    "secondary": [
+      "/faciliteiten/",
+      "Alle faciliteiten"
+    ],
+    "visual": "photo",
+    "caption": "Zonnebank bij FCZ",
+    "category": "MEER BIJ DE CLUB",
+    "id": "aanbod/zonnebank",
+    "number": "27",
+    "alt": "Fitnessapparatuur in een trainingsruimte van FCZ",
+    "position": "50% 50%",
+    "width": 680,
+    "height": 510
+  },
+  "aanbod/workshops/index.html": {
+    "topic": "Workshops & cursussen",
+    "line": "Nieuwsgierig blijven.",
+    "accent": "Iets nieuws ontdekken.",
+    "mood": "people",
+    "image": "google-club-10.webp",
+    "tags": [
+      "Actueel programma",
+      "Inhoud in overleg",
+      "Aanmelden in de club"
+    ],
+    "intro": "De club vermeldt workshops en cursussen. Informeer naar de actuele agenda, onderwerpen en mogelijkheden om deel te nemen.",
+    "primary": [
+      "/contact/",
+      "Vraag naar de mogelijkheden"
+    ],
+    "secondary": [
+      "/faciliteiten/",
+      "Alle faciliteiten"
+    ],
+    "visual": "photo",
+    "caption": "Workshops & cursussen bij FCZ",
+    "category": "MEER BIJ DE CLUB",
+    "id": "aanbod/workshops",
+    "number": "28",
+    "alt": "Drie medewerkers voor de ingang van Fitnesscentrum Zwanenburg",
+    "position": "50% 50%",
+    "width": 680,
+    "height": 453
+  },
+  "aanbod/horeca/index.html": {
+    "topic": "Horeca · Club Zwanenburg",
+    "line": "Nog even blijven.",
+    "accent": "Samen bij de club.",
+    "mood": "people",
+    "image": "google-club-17.webp",
+    "tags": [
+      "Ontmoeten",
+      "Even napraten",
+      "Vraag naar openingstijden"
+    ],
+    "intro": "Naast trainen is er horeca bij Club Zwanenburg. Vraag de club naar de actuele mogelijkheden en openingstijden.",
+    "primary": [
+      "/contact/",
+      "Vraag naar de mogelijkheden"
+    ],
+    "secondary": [
+      "/faciliteiten/",
+      "Alle faciliteiten"
+    ],
+    "visual": "photo",
+    "caption": "Horeca · Club Zwanenburg bij FCZ",
+    "category": "MEER BIJ DE CLUB",
+    "id": "aanbod/horeca",
+    "number": "29",
+    "alt": "De ingang van Fitnesscentrum Zwanenburg met rode loper",
+    "position": "50% 50%",
+    "width": 680,
+    "height": 314
+  },
+  "aanbod/index.html": {
+    "topic": "Ons aanbod",
+    "line": "Veel manieren.",
+    "accent": "Jouw beweging.",
+    "mood": "power",
+    "image": "google-club-01.webp",
+    "tags": [
+      "Fitness",
+      "Groepslessen",
+      "Vechtsport"
+    ],
+    "intro": "Vind de training die bij je past. Van zelfstandig fitnessen tot samen bewegen in een groepsles: je bent welkom om het gratis te proberen.",
+    "primary": [
+      "/gratis-proefles/",
+      "Kom gratis kennismaken"
+    ],
+    "secondary": [
+      "#pagina-inhoud",
+      "Ontdek alle trainingen"
+    ],
+    "visual": "catalog",
+    "caption": "Ons aanbod · Fitnesscentrum Zwanenburg",
+    "category": "JOUW CLUB. JOUW TEMPO.",
+    "id": "aanbod",
+    "number": "30",
+    "alt": "De rode fitnessruimte met krachtapparatuur bij FCZ",
+    "position": "50% 50%",
+    "width": 680,
+    "height": 510
+  },
+  "fitness-coaching/index.html": {
+    "topic": "Fitness & coaching",
+    "line": "Maak het jouw training.",
+    "accent": "Met ruimte om te groeien.",
+    "mood": "power",
+    "image": "google-club-07.webp",
+    "tags": [
+      "Eigen ritme",
+      "Jouw doel",
+      "Persoonlijke aandacht"
+    ],
+    "intro": "Zelfstandig aan de slag of met persoonlijke begeleiding? Ontdek de mogelijkheden voor kracht, conditie en jouw eigen ritme.",
+    "primary": [
+      "/gratis-proefles/?interest=fitness",
+      "Probeer fitness gratis"
+    ],
+    "secondary": [
+      "#pagina-inhoud",
+      "Ontdek fitness & coaching"
+    ],
+    "visual": "photo",
+    "caption": "Fitness & coaching · Fitnesscentrum Zwanenburg",
+    "category": "JOUW CLUB. JOUW TEMPO.",
+    "id": "fitness-coaching",
+    "number": "31",
+    "alt": "Persoonlijke begeleiding bij een oefening in de club",
+    "position": "58% 45%",
+    "width": 680,
+    "height": 453
+  },
+  "groepslessen/index.html": {
+    "topic": "Groepslessen",
+    "line": "Samen bewegen.",
+    "accent": "Dat geeft energie.",
+    "mood": "flow",
+    "image": "google-club-18.webp",
+    "tags": [
+      "Van yoga tot Zumba",
+      "Samen trainen",
+      "Gratis kennismaken"
+    ],
+    "intro": "Vind jouw ritme in de groep. Ontdek de verschillende lessen en kies wat je wilt proberen. Je eerste kennismaking is gratis.",
+    "primary": [
+      "/lesrooster/",
+      "Vind jouw lesmoment"
+    ],
+    "secondary": [
+      "/gratis-proefles/",
+      "Probeer een les gratis"
+    ],
+    "visual": "photo",
+    "caption": "Groepslessen · Fitnesscentrum Zwanenburg",
+    "category": "JOUW CLUB. JOUW TEMPO.",
+    "id": "groepslessen",
+    "number": "32",
+    "alt": "Een lichte trainingszaal met grote ramen bij FCZ",
+    "position": "50% 50%",
+    "width": 680,
+    "height": 313
+  },
+  "vechtsport-jeugd/index.html": {
+    "topic": "Vechtsport & jeugd",
+    "line": "Meer focus.",
+    "accent": "Meer uit jezelf.",
+    "mood": "combat",
+    "image": "google-club-09.webp",
+    "tags": [
+      "Techniek",
+      "Respect",
+      "Passende groepen"
+    ],
+    "intro": "Ontdek vechtsport en jeugdtraining bij FCZ. We kijken samen welke training en groep aansluiten bij jouw leeftijd en ervaring.",
+    "primary": [
+      "/gratis-proefles/",
+      "Kom gratis proeftrainen"
+    ],
+    "secondary": [
+      "#pagina-inhoud",
+      "Bekijk het aanbod"
+    ],
+    "visual": "photo",
+    "caption": "Vechtsport & jeugd · Fitnesscentrum Zwanenburg",
+    "category": "JOUW CLUB. JOUW TEMPO.",
+    "id": "vechtsport-jeugd",
+    "number": "33",
+    "alt": "Een trainingszaal met bokszakken bij FCZ",
+    "position": "50% 50%",
+    "width": 680,
+    "height": 313
+  },
+  "faciliteiten/index.html": {
+    "topic": "Faciliteiten",
+    "line": "Meer ruimte.",
+    "accent": "Meer mogelijkheden.",
+    "mood": "people",
+    "image": "google-club-04.webp",
+    "tags": [
+      "Verschillende zalen",
+      "Dakterras",
+      "Persoonlijke aandacht"
+    ],
+    "intro": "Een club met verschillende trainingsruimtes en extra faciliteiten. Kijk rond en vraag ons wat bij jouw bezoek past.",
+    "primary": [
+      "/de-club/",
+      "Ontdek de club"
+    ],
+    "secondary": [
+      "#pagina-inhoud",
+      "Bekijk de faciliteiten"
+    ],
+    "visual": "photo",
+    "caption": "Faciliteiten · Fitnesscentrum Zwanenburg",
+    "category": "JOUW CLUB. JOUW TEMPO.",
+    "id": "faciliteiten",
+    "number": "34",
+    "alt": "De trainingsruimte op het dakterras van FCZ",
+    "position": "50% 50%",
+    "width": 680,
+    "height": 314
+  },
+  "de-club/index.html": {
+    "topic": "De club",
+    "line": "Hier voel je de club.",
+    "accent": "Hier begint jouw verhaal.",
+    "mood": "people",
+    "image": "google-club-10.webp",
+    "tags": [
+      "Jouw plek",
+      "Jouw tempo",
+      "Welkom in Zwanenburg"
+    ],
+    "intro": "Meerdere verdiepingen, verschillende zalen en mensen die je graag op weg helpen. Neem een kijkje bij Fitnesscentrum Zwanenburg.",
+    "primary": [
+      "/gratis-proefles/",
+      "Kom de club ervaren"
+    ],
+    "secondary": [
+      "#club",
+      "Kijk binnen bij FCZ"
+    ],
+    "visual": "photo",
+    "caption": "De club · Fitnesscentrum Zwanenburg",
+    "category": "JOUW CLUB. JOUW TEMPO.",
+    "id": "de-club",
+    "number": "35",
+    "alt": "Drie medewerkers voor de ingang van Fitnesscentrum Zwanenburg",
+    "position": "50% 50%",
+    "width": 680,
+    "height": 453
+  },
+  "contact/index.html": {
+    "topic": "Contact",
+    "line": "We zien je graag.",
+    "accent": "In Zwanenburg.",
+    "mood": "people",
+    "image": "google-club-17.webp",
+    "tags": [
+      "Domineeslaan 87-A",
+      "1161 BW Zwanenburg",
+      "Je bent welkom"
+    ],
+    "intro": "Een vraag, je eerste bezoek of iets regelen bij de balie? Je vindt ons aan de Domineeslaan 87-A. We helpen je graag verder.",
+    "primary": [
+      "#contact",
+      "Adres & openingstijden"
+    ],
+    "secondary": [
+      "tel:+31204978616",
+      "Bel 020 497 8616"
+    ],
+    "visual": "address",
+    "caption": "Contact · Fitnesscentrum Zwanenburg",
+    "category": "JOUW CLUB. JOUW TEMPO.",
+    "id": "contact",
+    "number": "36",
+    "alt": "De ingang van Fitnesscentrum Zwanenburg met rode loper",
+    "position": "50% 50%",
+    "width": 680,
+    "height": 314
+  },
+  "lesrooster/index.html": {
+    "topic": "Lesrooster",
+    "line": "Maak tijd.",
+    "accent": "Voor jouw training.",
+    "mood": "practical",
+    "image": "",
+    "tags": [
+      "7 dagen",
+      "37 lesmomenten",
+      "Jouw keuze"
+    ],
+    "intro": "Van maandag tot en met zondag: bekijk alle 37 wekelijkse lesmomenten. Kies jouw dag en ontdek welke training in je agenda past.",
+    "primary": [
+      "#rooster",
+      "Bekijk het weekrooster"
+    ],
+    "secondary": [
+      "/gratis-proefles/",
+      "Probeer een les gratis"
+    ],
+    "visual": "calendar",
+    "caption": "Lesrooster · Fitnesscentrum Zwanenburg",
+    "category": "JOUW CLUB. JOUW TEMPO.",
+    "id": "lesrooster",
+    "number": "37",
+    "alt": "Binnen bij Fitnesscentrum Zwanenburg",
+    "position": "50% 50%"
+  },
+  "tarieven/index.html": {
+    "topic": "Tarieven",
+    "line": "Jouw doel.",
+    "accent": "Een passend abonnement.",
+    "mood": "practical",
+    "image": "",
+    "tags": [
+      "Geen inschrijfkosten",
+      "Persoonlijk inschrijven",
+      "Eerst gratis proberen"
+    ],
+    "intro": "Vergelijk de mogelijkheden en kies de looptijd die bij je past. Inschrijven doen we persoonlijk in de club, met alle afspraken vooraf duidelijk.",
+    "primary": [
+      "#tarieven",
+      "Vergelijk abonnementen"
+    ],
+    "secondary": [
+      "/gratis-proefles/",
+      "Probeer eerst gratis"
+    ],
+    "visual": "prices",
+    "caption": "Tarieven · Fitnesscentrum Zwanenburg",
+    "category": "JOUW CLUB. JOUW TEMPO.",
+    "id": "tarieven",
+    "number": "38",
+    "alt": "Binnen bij Fitnesscentrum Zwanenburg",
+    "position": "50% 50%"
+  },
+  "gratis-proefles/index.html": {
+    "topic": "Gratis proeftraining",
+    "line": "De eerste stap.",
+    "accent": "Die is van jou.",
+    "mood": "people",
+    "image": "google-club-07.webp",
+    "tags": [
+      "Eén gratis training",
+      "Geen abonnement",
+      "Welkom op jouw niveau"
+    ],
+    "intro": "Je hoeft nog niets te beslissen. Kies een training, kom de club ervaren en voel of het bij je past. Eén proeftraining, gratis en vrijblijvend.",
+    "primary": [
+      "#kennismaken",
+      "Regel jouw kennismaking"
+    ],
+    "secondary": [
+      "/aanbod/",
+      "Kies jouw training"
+    ],
+    "visual": "photo",
+    "caption": "Gratis proeftraining · Fitnesscentrum Zwanenburg",
+    "category": "JOUW CLUB. JOUW TEMPO.",
+    "id": "gratis-proefles",
+    "number": "39",
+    "alt": "Persoonlijke begeleiding bij een oefening in de club",
+    "position": "58% 45%",
+    "width": 680,
+    "height": 453
+  },
+  "inschrijven/index.html": {
+    "topic": "Lid worden",
+    "line": "Jouw start.",
+    "accent": "Persoonlijk geregeld.",
+    "mood": "practical",
+    "image": "",
+    "tags": [
+      "Inschrijven in de club",
+      "Alle kosten vooraf",
+      "Jij kiest"
+    ],
+    "intro": "Eerst de club ervaren, daarna pas kiezen. We bespreken je abonnement en schrijven je persoonlijk in bij de balie.",
+    "primary": [
+      "#lid-worden",
+      "Zo word je lid"
+    ],
+    "secondary": [
+      "/gratis-proefles/",
+      "Kom eerst gratis proberen"
+    ],
+    "visual": "join",
+    "caption": "Lid worden · Fitnesscentrum Zwanenburg",
+    "category": "JOUW CLUB. JOUW TEMPO.",
+    "id": "inschrijven",
+    "number": "40",
+    "alt": "Binnen bij Fitnesscentrum Zwanenburg",
+    "position": "50% 50%"
+  },
+  "opzeggen/index.html": {
+    "topic": "Opzeggen",
+    "line": "Opzeggen?",
+    "accent": "We helpen je graag.",
+    "mood": "people",
+    "image": "google-club-10.webp",
+    "tags": [
+      "Persoonlijk aan de balie",
+      "Duidelijke einddatum",
+      "We respecteren je keuze"
+    ],
+    "intro": "Soms verandert je ritme. Wil je stoppen? Kom persoonlijk langs bij de balie. We helpen je om de afspraken en einddatum rustig door te nemen.",
+    "primary": [
+      "#zo-zeg-je-op",
+      "Zo regel je het"
+    ],
+    "secondary": [
+      "/contact/",
+      "Adres & openingstijden"
+    ],
+    "visual": "photo",
+    "caption": "Opzeggen · Fitnesscentrum Zwanenburg",
+    "category": "JOUW CLUB. JOUW TEMPO.",
+    "id": "opzeggen",
+    "number": "41",
+    "alt": "Drie medewerkers voor de ingang van Fitnesscentrum Zwanenburg",
+    "position": "50% 50%",
+    "width": 680,
+    "height": 453
+  },
+  "veelgestelde-vragen/index.html": {
+    "topic": "Veelgestelde vragen",
+    "line": "Een vraag?",
+    "accent": "We helpen je op weg.",
+    "mood": "practical",
+    "image": "",
+    "tags": [
+      "Gratis kennismaken",
+      "Persoonlijk lid worden",
+      "Duidelijke afspraken"
+    ],
+    "intro": "Over je eerste training, inschrijven of je abonnement: vind hieronder de antwoorden. Kom gerust langs als je iets wilt bespreken.",
+    "primary": [
+      "#pagina-inhoud",
+      "Vind jouw antwoord"
+    ],
+    "secondary": [
+      "/contact/",
+      "Stel je vraag aan de club"
+    ],
+    "visual": "questions",
+    "caption": "Veelgestelde vragen · Fitnesscentrum Zwanenburg",
+    "category": "JOUW CLUB. JOUW TEMPO.",
+    "id": "veelgestelde-vragen",
+    "number": "42",
+    "alt": "Binnen bij Fitnesscentrum Zwanenburg",
+    "position": "50% 50%"
+  },
+  "jouw-ritme/index.html": {
+    "topic": "Jouw ritme",
+    "line": "Maak ruimte.",
+    "accent": "Voor jezelf.",
+    "mood": "flow",
+    "image": "google-club-05.webp",
+    "tags": [
+      "Jouw tijd",
+      "Jouw energie",
+      "Jouw voorbeeldweek"
+    ],
+    "intro": "Hoe past bewegen in jouw week? Speel met je trainingsritme en ontdek een voorbeeld dat aansluit bij jouw tijd en energie.",
+    "primary": [
+      "#jouw-ritme",
+      "Maak je voorbeeldweek"
+    ],
+    "secondary": [
+      "/lesrooster/",
+      "Bekijk echte lesmomenten"
+    ],
+    "visual": "photo",
+    "caption": "Jouw ritme · Fitnesscentrum Zwanenburg",
+    "category": "JOUW CLUB. JOUW TEMPO.",
+    "id": "jouw-ritme",
+    "number": "43",
+    "alt": "Trainingsapparatuur buiten op het dakterras van FCZ",
+    "position": "50% 50%",
+    "width": 680,
+    "height": 314
+  },
+  "privacy/index.html": {
+    "topic": "Privacy",
+    "line": "Jouw gegevens.",
+    "accent": "Met aandacht behandeld.",
+    "mood": "quiet",
+    "image": "",
+    "tags": [
+      "Naam",
+      "E-mailadres",
+      "Gewenste training"
+    ],
+    "intro": "Lees welke gegevens we voor een proeftraining gebruiken, waarvoor ze nodig zijn en hoe je contact opneemt met vragen over privacy.",
+    "primary": [
+      "#pagina-inhoud",
+      "Lees de privacyuitleg"
+    ],
+    "secondary": [
+      "/contact/",
+      "Contact met de club"
+    ],
+    "visual": "privacy",
+    "caption": "Privacy · Fitnesscentrum Zwanenburg",
+    "category": "JOUW CLUB. JOUW TEMPO.",
+    "id": "privacy",
+    "number": "44",
+    "alt": "Binnen bij Fitnesscentrum Zwanenburg",
+    "position": "50% 50%"
+  },
+  "voorwaarden/index.html": {
+    "topic": "Algemene voorwaarden",
+    "line": "Heldere afspraken.",
+    "accent": "Prettig sporten.",
+    "mood": "quiet",
+    "image": "",
+    "tags": [
+      "Aanmelden",
+      "Veilig trainen",
+      "Opzeggen"
+    ],
+    "intro": "Van persoonlijk aanmelden tot veilig trainen en opzeggen: hieronder staan de afspraken overzichtelijk bij elkaar. Lees ze vóór je een abonnement afsluit.",
+    "primary": [
+      "#pagina-inhoud",
+      "Lees de voorwaarden"
+    ],
+    "secondary": [
+      "/opzeggen/",
+      "Zo werkt opzeggen"
+    ],
+    "visual": "terms",
+    "caption": "Algemene voorwaarden · Fitnesscentrum Zwanenburg",
+    "category": "JOUW CLUB. JOUW TEMPO.",
+    "id": "voorwaarden",
+    "number": "45",
+    "alt": "Binnen bij Fitnesscentrum Zwanenburg",
+    "position": "50% 50%"
+  },
+  "huisregels/index.html": {
+    "topic": "Huisregels",
+    "line": "Samen trainen.",
+    "accent": "Samen zorgen voor de club.",
+    "mood": "quiet",
+    "image": "google-club-18.webp",
+    "tags": [
+      "Respect",
+      "Hygiëne",
+      "Veiligheid"
+    ],
+    "intro": "Een fijne club maken we samen. Met aandacht voor elkaar, zorgvuldig gebruik van materialen en duidelijke afspraken op de trainingsvloer.",
+    "primary": [
+      "#pagina-inhoud",
+      "Lees de huisregels"
+    ],
+    "secondary": [
+      "/voorwaarden/",
+      "Algemene voorwaarden"
+    ],
+    "visual": "rules",
+    "caption": "Huisregels · Fitnesscentrum Zwanenburg",
+    "category": "JOUW CLUB. JOUW TEMPO.",
+    "id": "huisregels",
+    "number": "46",
+    "alt": "Een lichte trainingszaal met grote ramen bij FCZ",
+    "position": "50% 50%",
+    "width": 680,
+    "height": 313
+  },
+  "zoeken/index.html": {
+    "topic": "Zoeken",
+    "line": "Jouw vraag.",
+    "accent": "Een goed vertrekpunt.",
+    "mood": "practical",
+    "image": "",
+    "tags": [
+      "Trainingen",
+      "Rooster & tarieven",
+      "Praktische informatie"
+    ],
+    "intro": "Zoek een training, een lesmoment of praktische informatie. We helpen je de juiste plek op de website te vinden.",
+    "primary": [
+      "#pagina-inhoud",
+      "Zoek op de website"
+    ],
+    "secondary": [
+      "/aanbod/",
+      "Ontdek het aanbod"
+    ],
+    "visual": "search",
+    "caption": "Zoeken · Fitnesscentrum Zwanenburg",
+    "category": "JOUW CLUB. JOUW TEMPO.",
+    "id": "zoeken",
+    "number": "47",
+    "alt": "Binnen bij Fitnesscentrum Zwanenburg",
+    "position": "50% 50%"
+  },
+  "404.html": {
+    "topic": "Pagina niet gevonden",
+    "line": "Even de weg kwijt?",
+    "accent": "We helpen je verder.",
+    "mood": "quiet",
+    "image": "",
+    "tags": [
+      "De club",
+      "Het aanbod",
+      "Jouw volgende stap"
+    ],
+    "intro": "Deze pagina kunnen we niet vinden. Kies hieronder waar je naartoe wilt, dan ben je zo weer op weg.",
+    "primary": [
+      "/",
+      "Terug naar de homepage"
+    ],
+    "secondary": [
+      "/zoeken/",
+      "Zoek op de website"
+    ],
+    "visual": "notfound",
+    "caption": "Pagina niet gevonden · Fitnesscentrum Zwanenburg",
+    "category": "JOUW CLUB. JOUW TEMPO.",
+    "id": "404",
+    "number": "48",
+    "alt": "Binnen bij Fitnesscentrum Zwanenburg",
+    "position": "50% 50%"
+  }
+}
