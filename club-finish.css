@@ -1,4 +1,5 @@
 /* Practical information and calm finishing, within the existing FCZ identity. */
+.inner-page .page-hero h1 br{display:initial}
 :root{--club-paper:#f2eee5;--club-border:#d9d0c2;--club-muted:#655e54}
 #trial-availability .button{display:flex;color:#fff;background:#bf2d25;margin-top:16px;width:fit-content;font-size:14px;padding:13px 18px}
 .hero-promise{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:12px;color:#f4eee3;line-height:1.5;width:100%}
@@ -18,3 +19,7 @@ body footer.fcz-footer{display:block;background:#171615;color:#e6dfd2;padding:0 
 @media(max-width:1050px){.fcz-membership-callout{grid-template-columns:1fr;gap:32px}.fcz-membership-heading>p:last-child{max-width:55ch}.fcz-faq-layout{grid-template-columns:1fr;gap:35px}body footer.fcz-footer .fcz-footer-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:34px 8%}.fcz-membership-page{padding-inline:5%;gap:20px}}
 @media(max-width:700px){.fcz-membership-page{grid-template-columns:1fr;padding-top:35px}.fcz-membership-cards{grid-template-columns:1fr}.fcz-membership-cards article{min-height:0;padding:26px}.fcz-membership-cards h3{font-size:32px}.fcz-membership-callout{padding:45px 6%}.fcz-visit-strip{gap:20px}.fcz-visit-strip>div{flex-basis:100%}.fcz-faq-list summary{font-size:16px}.fcz-faq-list details p{margin-right:0}.fcz-faq-layout h2{font-size:38px}.fcz-member-card h2{font-size:38px}.hero-promise{gap:7px 13px;font-size:11px}.photo-experience .hero-intro{gap:17px}.photo-experience .hero-intro .hero-promise{margin-top:0}body footer.fcz-footer .fcz-footer-grid{padding:40px 0;grid-template-columns:minmax(0,1fr);gap:25px}body footer.fcz-footer .fcz-footer-grid nav{border-top:1px solid #ffffff20;padding-top:16px}body footer.fcz-footer .fcz-footer-grid nav a{min-height:44px;font-size:14px}body footer.fcz-footer .fcz-footer-brand>p{max-width:40ch}body footer.fcz-footer h2{font-size:15px;margin-bottom:12px}body footer.fcz-footer .fcz-footer-bottom{padding-bottom:calc(24px + env(safe-area-inset-bottom))}.fcz-member-card{scroll-margin-top:105px}}
 @media(prefers-reduced-motion:reduce){.photo-experience .hero-intro{animation:none;opacity:1;transform:none}}
+
+body footer.fcz-footer{margin:0;width:100%;max-width:none}
+body footer.fcz-footer nav a:after{display:none}
+@media(min-width:1051px){body>header #navigation .mobile-join{display:none}}

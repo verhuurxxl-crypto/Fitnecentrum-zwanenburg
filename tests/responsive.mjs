@@ -18,11 +18,13 @@ for (const [engine,type] of Object.entries({chromium,webkit})) {
     assert.equal(response.status(),200,`${engine} ${width} ${route}: HTTP`);
     await page.locator('h1').waitFor({state:'visible'});
     await page.evaluate(()=>Promise.race([document.fonts.ready,new Promise(r=>setTimeout(r,1500))]));
-    const layout=await page.evaluate(()=>({width:innerWidth,scroll:document.documentElement.scrollWidth,bad:[...document.querySelectorAll('main h1,main h2,main h3,.fcz-footer-grid,.fcz-membership-page,.fcz-faq-list')].filter(e=>e.getClientRects().length).map(e=>({text:e.textContent.trim().slice(0,60),left:e.getBoundingClientRect().left,right:e.getBoundingClientRect().right})).filter(e=>e.left < -1||e.right>innerWidth+1)}));
+    const layout=await page.evaluate(()=>({width:innerWidth,scroll:document.documentElement.scrollWidth,bad:[...document.querySelectorAll('main h1,main h2,main h3,.fcz-footer-grid,.fcz-membership-page,.fcz-faq-list,body>header .logo,body>header .header-cta,body>header .menu-toggle')].filter(e=>e.getClientRects().length).map(e=>({text:e.textContent.trim().slice(0,60),left:e.getBoundingClientRect().left,right:e.getBoundingClientRect().right})).filter(e=>e.left < -1||e.right>innerWidth+1)}));
     const label=`${engine} ${width} ${route}`;
     try {
      assert.ok(layout.scroll<=layout.width+1,label+': horizontale overflow '+JSON.stringify(layout));
      assert.deepEqual(layout.bad,[],label+': content buiten beeld');
+     if(width>1050)assert.equal(await page.locator('#navigation .mobile-join').isVisible(),false,label+': geen dubbele proeflesknop');
+     if(await page.locator('.page-hero h1 br').count())assert.notEqual(await page.locator('.page-hero h1 br').first().evaluate(e=>getComputedStyle(e).display),'none',label+': bewuste regelafbreking zichtbaar');
      assert.equal(await page.locator('footer a[href="/inschrijven/#opzeggen"]').count(),1,label+': opzegroute');
      assert.equal(await page.locator('footer a[href="tel:+31204978616"]').count(),1,label+': telefoon');
      if(route==='/gratis-proefles/'){
