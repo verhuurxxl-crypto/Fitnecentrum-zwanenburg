@@ -107,7 +107,11 @@ for (const [engine,type] of Object.entries({chromium,webkit})) {
      throw error;
     }
     if(engine==='chromium'&&[375,1366].includes(width)&&['/','/inschrijven/','/opzeggen/','/gratis-proefles/','/lesrooster/','/tarieven/'].includes(route))await page.screenshot({path:`test-results/${engine}-${width}-${route.replaceAll('/','_')||'home'}.png`,fullPage:true});
-    if(engine==='chromium'&&[375,1366].includes(width)&&route==='/')await page.locator('footer.fcz-footer').screenshot({path:`test-results/footer-${width}.png`});
+    if(route==='/'){
+     await page.locator('footer.fcz-footer').scrollIntoViewIfNeeded();
+     await page.waitForFunction(()=>!document.querySelector('.mobile-sticky-join')?.classList.contains('show'));
+     if(engine==='chromium'&&[375,1366].includes(width))await page.locator('footer.fcz-footer').screenshot({path:`test-results/footer-${width}.png`,animations:'disabled'});
+    }
    }
    await context.close();
   }

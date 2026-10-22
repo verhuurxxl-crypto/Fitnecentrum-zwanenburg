@@ -49,7 +49,13 @@ if(heroEl && matchMedia('(pointer:fine) and (prefers-reduced-motion:no-preferenc
  heroEl.addEventListener('pointerleave',()=>{heroEl.style.setProperty('--art-x','0px');heroEl.style.setProperty('--art-y','0px');});
 }
 const stickyJoin=document.querySelector('.mobile-sticky-join');
-if(stickyJoin&&heroEl){new IntersectionObserver(entries=>{stickyJoin.classList.toggle('show',!entries[0].isIntersecting);},{threshold:0}).observe(heroEl);}
+if(stickyJoin&&heroEl){
+ let heroVisible=true,footerVisible=false;
+ const updateStickyJoin=()=>stickyJoin.classList.toggle('show',!heroVisible&&!footerVisible);
+ new IntersectionObserver(entries=>{heroVisible=entries[0].isIntersecting;updateStickyJoin();},{threshold:0}).observe(heroEl);
+ const pageFooter=document.querySelector('footer.fcz-footer');
+ if(pageFooter)new IntersectionObserver(entries=>{footerVisible=entries[0].isIntersecting;updateStickyJoin();},{threshold:0}).observe(pageFooter);
+}
 
 // Calm, controllable movement through the club's own photographs.
 const sceneImages=[...document.querySelectorAll('.scene-image')];
