@@ -58,3 +58,5 @@ body footer.fcz-footer .fcz-footer-bottom nav a{display:inline-flex;align-items:
  body footer.fcz-footer .fcz-footer-bottom nav{gap:5px 20px;width:100%}
  body footer.fcz-footer .fcz-footer-bottom nav a{font-size:11px}
 }
+/* The sticky action hides at the footer, so no empty mobile spacer is needed. */
+@media(max-width:600px){body{padding-bottom:0}}
