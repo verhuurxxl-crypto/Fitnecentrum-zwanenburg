@@ -1,0 +1,9 @@
+const photos=[...document.querySelectorAll('[data-gallery-photo]')];
+if(photos.length&&typeof HTMLDialogElement!=='undefined'){
+ const dialog=document.createElement('dialog');dialog.className='photo-viewer';dialog.setAttribute('aria-label','Clubfoto bekijken');
+ dialog.innerHTML='<div class="viewer-toolbar"><span id="viewer-count"></span><button type="button" data-close aria-label="Foto sluiten">Sluiten ×</button></div><img alt=""><div class="viewer-bottom"><button type="button" data-prev aria-label="Vorige foto">←</button><p aria-live="polite"><strong id="viewer-caption"></strong><small id="viewer-credit"></small></p><button type="button" data-next aria-label="Volgende foto">→</button></div>';
+ document.body.append(dialog);let index=0,opener=null;
+ function show(i){index=(i+photos.length)%photos.length;const a=photos[index],img=dialog.querySelector('img');img.src=a.href;img.alt=a.dataset.caption;dialog.querySelector('#viewer-count').textContent=String(index+1).padStart(2,'0')+' / '+photos.length;dialog.querySelector('#viewer-caption').textContent=a.dataset.caption;dialog.querySelector('#viewer-credit').textContent='Foto: '+a.dataset.credit+' · Google-bedrijfsprofiel';}
+ for(const [i,a] of photos.entries())a.addEventListener('click',e=>{if(e.ctrlKey||e.metaKey||e.shiftKey||e.altKey)return;e.preventDefault();opener=a;show(i);dialog.showModal();});
+ dialog.querySelector('[data-close]').addEventListener('click',()=>dialog.close());dialog.querySelector('[data-prev]').addEventListener('click',()=>show(index-1));dialog.querySelector('[data-next]').addEventListener('click',()=>show(index+1));dialog.addEventListener('keydown',e=>{if(e.key==='ArrowLeft'){e.preventDefault();show(index-1)}if(e.key==='ArrowRight'){e.preventDefault();show(index+1)}});dialog.addEventListener('click',e=>{if(e.target===dialog)dialog.close()});dialog.addEventListener('close',()=>opener?.focus());
+}

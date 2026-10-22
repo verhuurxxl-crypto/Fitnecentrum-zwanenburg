@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /
+# Private concept. Enable indexing only after production content approval.

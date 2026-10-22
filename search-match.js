@@ -1,0 +1,2 @@
+const normalize=value=>value.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
+export function searchPages(pages,query){const words=normalize(query).split(' ').filter(Boolean);if(!words.length)return[];return pages.map(p=>{const title=normalize(p.title),body=normalize(p.description);const matched=words.every(w=>(title+' '+body).includes(w));return{p,score:matched?words.reduce((s,w)=>s+(title.includes(w)?3:1),0):0}}).filter(x=>x.score).sort((a,b)=>b.score-a.score).map(x=>x.p);}

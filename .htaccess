@@ -1,0 +1,12 @@
+DirectoryIndex index.html
+Options -Indexes
+<IfModule mod_headers.c>
+Header set X-Content-Type-Options "nosniff"
+Header set Referrer-Policy "strict-origin-when-cross-origin"
+Header set X-Robots-Tag "noindex, nofollow"
+</IfModule>
+<IfModule mod_mime.c>
+AddType text/javascript .js .mjs
+AddType image/webp .webp
+AddType image/svg+xml .svg
+</IfModule>

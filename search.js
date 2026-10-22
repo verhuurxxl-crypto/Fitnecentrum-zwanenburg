@@ -1,0 +1,9 @@
+import {searchPages} from './search-match.js';
+let indexPromise;
+const getIndex=()=>indexPromise||(indexPromise=fetch('/search-index.json').then(r=>{if(!r.ok)throw Error();return r.json();}).catch(e=>{indexPromise=null;throw e}));
+for(const form of document.querySelectorAll('[data-site-search]')){
+ const input=form.querySelector('input'),results=form.querySelector('.search-results'),full=form.hasAttribute('data-full-search');let revision=0,timer;
+ async function render(){const ticket=++revision,q=input.value.trim();results.replaceChildren();results.hidden=!q;if(!q)return;results.textContent='Zoeken…';try{const pages=await getIndex();if(ticket!==revision)return;const found=searchPages(pages,q);results.replaceChildren();const count=document.createElement('p');count.className='search-count';count.textContent=found.length?found.length+' resultaten':'Geen resultaten. Probeer bijvoorbeeld fitness, yoga of tarieven.';results.append(count);for(const p of found.slice(0,full?50:5)){const a=document.createElement('a');a.href=p.path;const title=document.createElement('strong');title.textContent=p.title;const desc=document.createElement('span');desc.textContent=p.description;a.append(title,desc);results.append(a)}if(!full&&found.length>5){const more=document.createElement('a');more.href='/zoeken/?q='+encodeURIComponent(q);more.textContent='Bekijk alle resultaten ↗';results.append(more)}}catch{results.textContent='Zoeken lukt nu niet. Bekijk het aanbod via het menu of probeer het opnieuw.'}}
+ input.addEventListener('input',()=>{clearTimeout(timer);revision++;timer=setTimeout(render,120)});
+ if(full){input.value=new URLSearchParams(location.search).get('q')||'';render();form.addEventListener('submit',e=>{e.preventDefault();history.replaceState(null,'','/zoeken/?q='+encodeURIComponent(input.value.trim()));render()})}
+}

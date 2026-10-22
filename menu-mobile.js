@@ -1,0 +1,5 @@
+const small=matchMedia('(max-width:600px)');const groups=[...document.querySelectorAll('.mega-column')];
+for(const [i,g] of groups.entries()){const heading=g.querySelector('h3'),links=g.querySelector(':scope>div');if(!heading||!links)continue;links.id='menu-group-'+i;const title=heading.textContent,b=document.createElement('button');b.type='button';b.className='mega-heading-toggle';b.append(document.createTextNode(title));const marker=document.createElement('span');marker.setAttribute('aria-hidden','true');b.append(marker);b.setAttribute('aria-controls',links.id);heading.replaceChildren(b);
+ const sync=()=>{const collapsed=small.matches&&i!==0;links.hidden=collapsed;b.setAttribute('aria-expanded',String(!collapsed));marker.textContent=collapsed?'+':'−';b.disabled=!small.matches};sync();small.addEventListener('change',sync);
+ b.addEventListener('click',()=>{if(!small.matches)return;links.hidden=!links.hidden;b.setAttribute('aria-expanded',String(!links.hidden));marker.textContent=links.hidden?'+':'−'});
+}
