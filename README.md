@@ -32,18 +32,18 @@ De privacypagina noemt dat voor de clubmailbox zelf ook verwijdering na 90 dagen
 ## Inhoud vóór livegang bevestigen
 
 - Juridische bedrijfsnaam, KvK en zakelijk/privacy-e-mailadres.
-- Actuele prijzen, totale kosten, looptijden, verlenging en definitieve voorwaarden. De geïmporteerde voorbeeldtarieven zijn nog als zodanig gemarkeerd; ook het aanbod met 24 maanden vraagt controle op de wettelijke voorwaarden.
+- Actuele prijzen, totale kosten, looptijden, verlenging en definitieve voorwaarden. De prijzen zijn bijgewerkt zoals hieronder beschreven; het aanbod met 24 maanden vraagt controle op de wettelijke voorwaarden.
 - Eén gratis proeftraining naar keuze als bevestigd beleid; jeugdgroepen en afzonderlijke diensten.
-- Actueel lesrooster en openingstijden; bestaande brondata is van 9 september 2026.
+- Actueel lesrooster en openingstijden; rooster is op 22 oktober 2026 overgenomen van de oude website.
 - Toestemming/gebruiksrechten voor aangeleverde foto's en reviewfragmenten.
 - Maildienst, verwerkingsovereenkomsten, mailbox-/log-/back-upbewaarbeleid. De nieuwe privacytekst is nog een concept.
 - Definitief domein, HTTPS, www, canonicals, mobiele browsers en echte formulierontvangst. Noindex blijft actief voor de testversie; verwijder het pas bij goedgekeurde livegang.
 
-Er zijn geen DNS-, domein- of zakelijke e-mailinstellingen gewijzigd. Deze repository is nog niet door ons aan een Hostinger-website gekoppeld.
+Er zijn geen DNS-, domein- of zakelijke e-mailinstellingen gewijzigd. De opdrachtgever heeft de repository aan de Hostinger-demo gekoppeld; wijzigingen op main zijn eerder zichtbaar geverifieerd op demo.onlinebeheer.me.
 
 ## Checks
 
-`python3 tests/check-site.py`, `node --check trial.js`, PHP-syntaxcontrole en `php tests/trial.php`. Er is geen PHP-runtime in de lokale werkruimte; GitHub Actions voert PHP-controles uit. Live-mailtest en visuele iPhone/Safari-controle moeten nog volgen. Het beschikbare lokale previewplatform was niet beschikbaar, dus browser-QA is niet als geslaagd aangemerkt.
+`python3 tests/check-site.py`, `node --check trial.js`, PHP-syntaxcontrole en `php tests/trial.php`. Er is geen PHP-runtime in de lokale werkruimte; GitHub Actions voert PHP-controles uit. Live-mailtest en controle op een echte iPhone moeten nog volgen. Chromium- en WebKit-browserchecks worden in GitHub Actions uitgevoerd.
 
 ## Afwerking 22 oktober 2026
 
@@ -52,3 +52,13 @@ Nieuwe praktische pagina voor persoonlijk inschrijven en opzeggen, veelgestelde 
 De oude clubwebsite noemt op verschillende pagina’s €72,50 en €72,90 voor een gezin, en spreekt zichzelf tegen over €15 inschrijfkosten of terugbetaalbare pasborg. Deze gegevens zijn daarom niet als definitieve nieuwe afspraken vastgesteld. Laat de eigenaar dit bevestigen.
 
 Aanvullende CI: vier mobiele breedtes (320/375/390/430) en desktop in Chromium en WebKit, menu openen/sluiten/scrollherstel, ontbrekende bestanden en frontendfouten/herhalen met een uitsluitend lokaal onderschept mailtransport. Screenshots en resultaten staan bij de GitHub Actions-run. Dit vervangt geen echte iPhone-test of gecontroleerde inboxontvangst.
+
+## Prijzen en activiteiten — 22 oktober 2026
+
+Alle 37 lesmomenten uit https://fitnesscentrumzwanenburg.nl/les-rooster/ overgenomen, inclusief gelijktijdige lessen en weekend. Geen zaalnamen toegevoegd: die vermeldt deze bron niet. Niet-bevestigde donderdagles Buikspierkwartier verwijderd uit het rooster. Activiteiten zonder gepubliceerd tijdstip blijven in het aanbod, zonder verzonnen lesmomenten.
+
+Opdrachtgever bevestigde in deze sessie €72,50 per maand voor gezinnen en geen inschrijfkosten. Geen pasborgbedrag gepubliceerd: het antwoord was “geen”. De drie basistarieven (€34,95 / €27,50 / €22,95) zijn behouden. Strength & Conditioning: €15 toeslag of €35 uitsluitend S&C; 10-rittenkaart €65; jeugd €15. Bron: oude tarievenpagina. Inschrijven gebeurt in de club. Schriftelijk opzeggen blijft mogelijk.
+
+Bewerk aanvullende prijzen en rooster in `club-data.json` en voer `python3 tests/sync-club.py` uit. Dit werkt de statische HTML op homepage, tarievenpagina en lesrooster bij. CI voorkomt dat deze kopieën uiteenlopen. Het volledige weekrooster werkt ook zonder JavaScript; JavaScript voegt filters per dag en training toe. Elke les verwijst naar de bijbehorende geldige proeflesvoorkeur. Geen aanmelding of beschikbaarheidsreservering via het rooster.
+
+Testuitbreiding: 12 routes in Chromium/WebKit op vier mobiele breedtes en desktop, zeven dagen, alle filters, lege selectie en herstel, prijzen en weekrooster zonder JavaScript. E-mailconfiguratie en gecontroleerde inboxontvangst blijven open.

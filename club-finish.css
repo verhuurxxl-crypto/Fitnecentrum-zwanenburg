@@ -23,3 +23,23 @@ body footer.fcz-footer{display:block;background:#171615;color:#e6dfd2;padding:0 
 body footer.fcz-footer{margin:0;width:100%;max-width:none}
 body footer.fcz-footer nav a:after{display:none}
 @media(min-width:1051px){body>header #navigation .mobile-join{display:none}}
+/* Published weekly roster and additional membership prices. */
+.schedule [hidden]{display:none!important}
+#schedule-controls,#schedule-empty{grid-column:2;min-width:0}
+.schedule .days{flex-wrap:wrap;overflow:visible;gap:5px}
+.schedule .days button{padding:10px 12px;font-size:13px}
+.schedule-day{margin-top:26px}
+.schedule-day-heading{font-size:30px;margin-bottom:12px}
+.schedule .lesson{grid-template-columns:145px minmax(0,1fr) 96px}
+.schedule .lesson-time{font-size:12px;color:#666}
+.schedule .lesson time{font:inherit;white-space:nowrap}
+.schedule .lesson h4{font-family:var(--heading);font-size:25px;line-height:1.15;margin:0;overflow-wrap:normal;hyphens:none}
+.schedule .lesson>a{grid-row:auto;grid-column:3}
+.club-extra-prices{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;text-align:left;border-top:1px solid #c5c5bf}
+.club-extra-prices article{padding:24px 20px;border-bottom:1px solid #c5c5bf}
+.club-extra-prices h3{font-family:var(--body);font-size:14px;line-height:1.5;margin-bottom:8px}
+.club-extra-prices p{font-size:13px;margin:0;border:0;padding:0}
+.club-extra-prices .club-extra-amount{font-weight:700;font-size:24px}
+.club-extra-amount span{font-size:12px;font-weight:400;white-space:nowrap}
+@media(max-width:700px){.club-extra-prices{grid-template-columns:repeat(2,minmax(0,1fr))}.schedule .lesson{grid-template-columns:83px minmax(0,1fr) 76px;gap:10px}.schedule .lesson h4{font-size:23px}.schedule .lesson-time{font-size:11px}.lesson-time>span{display:block;height:2px;font-size:0}.schedule .days button{font-size:12px;min-width:0;padding:10px 12px}}
+@media(max-width:400px){.club-extra-prices{grid-template-columns:1fr}.club-extra-prices article{padding:20px 0}.schedule .lesson{grid-template-columns:62px minmax(0,1fr) 68px;gap:8px}.schedule .lesson h4{font-size:21px}.schedule .lesson>a{min-width:0;font-size:11px}}

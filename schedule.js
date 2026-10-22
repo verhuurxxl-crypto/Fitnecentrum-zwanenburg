@@ -1,10 +1,36 @@
-const sessions=[
-[['08:30 – 09:30','Circuit training','Cardiozaal'],['12:00 – 13:00','Kickboksen','Groepslessenzaal'],['17:00 – 18:00','Jeugd kickboksen','Groepslessenzaal'],['19:00 – 20:00','Zumba','Groepslessenzaal'],['19:30 – 20:30','Circuit training','Cardiozaal'],['20:30 – 21:30','Kickboksen · zaktraining','Groepslessenzaal']],
-[['12:00 – 13:00','Kickboksen · zaktraining','Groepslessenzaal'],['18:00 – 19:00','Jeugd kickboksen','Groepslessenzaal']],
-[['08:30 – 09:30','Circuit training','Cardiozaal'],['12:00 – 13:00','Kickboksen · zaktraining','Groepslessenzaal'],['19:30 – 20:30','Circuit training','Cardiozaal'],['20:00 – 21:00','Zumba','Groepslessenzaal'],['20:30 – 21:30','Kickboksen · zaktraining','Groepslessenzaal']],
-[['08:30 – 09:30','Circuit training','Cardiozaal'],['12:00 – 13:00','Kickboksen · zaktraining','Groepslessenzaal'],['18:45 – 19:00','Buikspierkwartier','Groepslessenzaal'],['19:00 – 20:00','Circuit training','Cardiozaal'],['20:00 – 21:00','Kickboksen · zaktraining','Groepslessenzaal']],
-[['09:30 – 10:30','Kickboksen · zaktraining','Groepslessenzaal'],['20:00 – 21:30','Kickboksen','Groepslessenzaal']]
-];
-let selectedDay=0;
-function renderDay(day){selectedDay=day;const filter=document.querySelector('#lesson-filter')?.value||'all';const selected=sessions[day].filter(([,name])=>filter==='all'||(filter==='jeugd'?name.includes('Jeugd'):filter==='kick'?name.includes('Kickboksen')&&!name.includes('Jeugd'):!name.includes('Kickboksen')));document.querySelector('#lessons').innerHTML=selected.length?selected.map(([time,name,room])=>`<article class="lesson"><time>${time}</time><h3>${name}</h3><span class="room">${room}</span><a href="/gratis-proefles/?interest=${name.includes('Kickboksen')?'kickboksen':'groepslessen'}" aria-label="Proefles aanvragen voor ${name}">Proefles ↗</a></article>`).join(''):'<p class="schedule-empty">Geen les in deze selectie. Kies een andere dag of bekijk alle trainingen.</p>';}
-document.querySelectorAll('[data-day]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-day]').forEach(x=>{x.classList.toggle('active',x===b);x.setAttribute('aria-pressed',String(x===b));});renderDay(Number(b.dataset.day));}));document.querySelector('#lesson-filter')?.addEventListener('change',()=>renderDay(selectedDay));renderDay(0);
+// The complete week is static HTML. JavaScript adds day and training filters.
+(() => {
+ const controls=document.querySelector('#schedule-controls');
+ const groups=[...document.querySelectorAll('[data-schedule-day]')];
+ if(!controls||!groups.length)return;
+ const filter=document.querySelector('#lesson-filter');
+ const buttons=[...controls.querySelectorAll('[data-day]')];
+ const empty=document.querySelector('#schedule-empty');
+ const status=document.querySelector('#schedule-status');
+ let selected='0';
+ function render(){
+  let count=0;
+  for(const group of groups){
+   const active=selected==='all'||group.dataset.scheduleDay===selected;
+   let visible=0;
+   group.querySelectorAll('.lesson').forEach(lesson=>{
+    lesson.hidden=filter.value!=='all'&&lesson.dataset.category!==filter.value;
+    if(!lesson.hidden)visible++;
+   });
+   group.hidden=!active||visible===0;
+   if(active)count+=visible;
+  }
+  buttons.forEach(button=>{
+   const active=button.dataset.day===selected;
+   button.classList.toggle('active',active);
+   button.setAttribute('aria-pressed',String(active));
+  });
+  empty.hidden=count>0;
+  const day=buttons.find(button=>button.dataset.day===selected).textContent;
+  status.textContent=`${day}: ${count} ${count===1?'les':'lessen'}`;
+ }
+ buttons.forEach(button=>button.addEventListener('click',()=>{selected=button.dataset.day;render();}));
+ filter.addEventListener('change',render);
+ controls.hidden=false;
+ render();
+})();

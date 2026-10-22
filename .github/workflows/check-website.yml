@@ -19,7 +19,9 @@ jobs:
         with:
           node-version: '22'
       - name: HTML en bezoekersroute controleren
-        run: python3 tests/check-site.py
+        run: |
+          python3 tests/check-site.py
+          python3 tests/sync-club.py --check
       - name: JavaScript-syntax controleren
         run: |
           for file in *.js; do node --check "$file"; done

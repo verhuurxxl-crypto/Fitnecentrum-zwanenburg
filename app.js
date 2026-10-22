@@ -23,15 +23,6 @@ document.addEventListener('keydown',e=>{const anyMenuOpen=!megaPanel.hidden||nav
 function syncHeader(){document.documentElement.style.setProperty('--nav-height',siteHeader.offsetHeight+'px');siteHeader.classList.toggle('scrolled',window.scrollY>35);}
 let mobileMenuState=isMobileMenu();window.addEventListener('resize',()=>{const next=isMobileMenu();if(next!==mobileMenuState){closeMenu();mobileMenuState=next;}syncHeader();});window.addEventListener('scroll',syncHeader,{passive:true});syncHeader();
 const motion=document.querySelector('#motion');motion.addEventListener('click',()=>{const paused=document.body.classList.toggle('paused');motion.setAttribute('aria-pressed',String(paused));motion.setAttribute('aria-label',paused?'Animaties hervatten':'Animaties pauzeren');motion.innerHTML=(paused?'▶':'Ⅱ')+' <span>'+(paused?'Beweging hervatten':'Beweging pauzeren')+'</span>';});
-const sessions=[
-[['08:30 – 09:30','Circuit training','Cardiozaal'],['12:00 – 13:00','Kickboksen','Groepslessenzaal'],['17:00 – 18:00','Jeugd kickboksen','Groepslessenzaal'],['19:00 – 20:00','Zumba','Groepslessenzaal'],['19:30 – 20:30','Circuit training','Cardiozaal'],['20:30 – 21:30','Kickboksen · zaktraining','Groepslessenzaal']],
-[['12:00 – 13:00','Kickboksen · zaktraining','Groepslessenzaal'],['18:00 – 19:00','Jeugd kickboksen','Groepslessenzaal']],
-[['08:30 – 09:30','Circuit training','Cardiozaal'],['12:00 – 13:00','Kickboksen · zaktraining','Groepslessenzaal'],['19:30 – 20:30','Circuit training','Cardiozaal'],['20:00 – 21:00','Zumba','Groepslessenzaal'],['20:30 – 21:30','Kickboksen · zaktraining','Groepslessenzaal']],
-[['08:30 – 09:30','Circuit training','Cardiozaal'],['12:00 – 13:00','Kickboksen · zaktraining','Groepslessenzaal'],['18:45 – 19:00','Buikspierkwartier','Groepslessenzaal'],['19:00 – 20:00','Circuit training','Cardiozaal'],['20:00 – 21:00','Kickboksen · zaktraining','Groepslessenzaal']],
-[['09:30 – 10:30','Kickboksen · zaktraining','Groepslessenzaal'],['20:00 – 21:30','Kickboksen','Groepslessenzaal']]
-];
-function renderDay(day){document.querySelector('#lessons').innerHTML=sessions[day].map(([time,name,room])=>`<article class="lesson"><time>${time}</time><h3>${name}</h3><span class="room">${room}</span><a href="#proefles" aria-label="Kennismaken met ${name}">↗</a></article>`).join('');}
-document.querySelectorAll('[data-day]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-day]').forEach(x=>{x.classList.toggle('active',x===b);x.setAttribute('aria-pressed',String(x===b));});renderDay(Number(b.dataset.day));}));if(document.querySelector('#lessons'))renderDay(0);
 const serviceData=window.FCZ_SERVICES||[];
 const serviceById=new Map(serviceData.map(s=>[s.id,s]));
 const serviceGroups={fitness:'FITNESS & COACHING',lessen:'GROEPSLESSEN',sport:'VECHTSPORT & JEUGD',extra:'MEER BIJ DE CLUB'};

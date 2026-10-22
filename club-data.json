@@ -1,0 +1,338 @@
+{
+  "checked": "2026-10-22",
+  "schedule_source": "https://fitnesscentrumzwanenburg.nl/les-rooster/",
+  "prices_source": "https://fitnesscentrumzwanenburg.nl/tarieven-lesrooster/",
+  "owner_confirmed": {
+    "family_monthly_eur": "72.50",
+    "registration_fee_eur": "0.00",
+    "note": "Bevestigd door opdrachtgever op 22 oktober 2026; geen pasborg gepubliceerd."
+  },
+  "prices": [
+    {
+      "name": "Jeugd t/m 12 jaar",
+      "amount": "15",
+      "unit": "/ maand"
+    },
+    {
+      "name": "Gezin + kinderen tot 18 jaar",
+      "amount": "72,50",
+      "unit": "/ maand"
+    },
+    {
+      "name": "Strength & Conditioning · toeslag",
+      "amount": "15",
+      "unit": "extra / maand",
+      "detail": "Bovenop een fitnessabonnement."
+    },
+    {
+      "name": "Alleen Strength & Conditioning",
+      "amount": "35",
+      "unit": "/ maand"
+    },
+    {
+      "name": "10-rittenkaart",
+      "amount": "65",
+      "unit": "/ kaart"
+    },
+    {
+      "name": "Bedrijfsfitness",
+      "detail": "Tarief op aanvraag, afhankelijk van het aantal deelnemers."
+    }
+  ],
+  "days": [
+    {
+      "name": "Maandag",
+      "lessons": [
+        {
+          "start": "08:30",
+          "end": "09:30",
+          "name": "Circuit training",
+          "interest": "circuit-training",
+          "category": "groep"
+        },
+        {
+          "start": "09:30",
+          "end": "10:30",
+          "name": "Pilates",
+          "interest": "pilates",
+          "category": "groep"
+        },
+        {
+          "start": "12:00",
+          "end": "13:00",
+          "name": "Kickboksen · zaktraining",
+          "interest": "zaktraining",
+          "category": "kick"
+        },
+        {
+          "start": "17:00",
+          "end": "18:00",
+          "name": "Jeugd kickboksen",
+          "interest": "jeugd-kickboksen",
+          "category": "jeugd"
+        },
+        {
+          "start": "17:00",
+          "end": "18:00",
+          "name": "Jeugd Strength & Conditioning",
+          "interest": "jeugd-strength",
+          "category": "jeugd"
+        },
+        {
+          "start": "19:00",
+          "end": "20:00",
+          "name": "Bodyshape",
+          "interest": "bodyshape",
+          "category": "groep"
+        },
+        {
+          "start": "19:00",
+          "end": "20:00",
+          "name": "Zumba",
+          "interest": "zumba",
+          "category": "groep"
+        },
+        {
+          "start": "19:30",
+          "end": "20:30",
+          "name": "Circuit training",
+          "interest": "circuit-training",
+          "category": "groep"
+        },
+        {
+          "start": "20:00",
+          "end": "21:00",
+          "name": "Strength & Conditioning",
+          "interest": "strength-conditioning",
+          "category": "groep"
+        },
+        {
+          "start": "20:30",
+          "end": "21:30",
+          "name": "Kickboksen · zaktraining",
+          "interest": "zaktraining",
+          "category": "kick"
+        }
+      ]
+    },
+    {
+      "name": "Dinsdag",
+      "lessons": [
+        {
+          "start": "09:30",
+          "end": "10:30",
+          "name": "Bodypump",
+          "interest": "bodypump",
+          "category": "groep"
+        },
+        {
+          "start": "12:00",
+          "end": "13:00",
+          "name": "Kickboksen · zaktraining",
+          "interest": "zaktraining",
+          "category": "kick"
+        },
+        {
+          "start": "18:00",
+          "end": "19:00",
+          "name": "Jeugd Strength & Conditioning",
+          "interest": "jeugd-strength",
+          "category": "jeugd"
+        },
+        {
+          "start": "18:00",
+          "end": "19:00",
+          "name": "Jeugd kickboksen",
+          "interest": "jeugd-kickboksen",
+          "category": "jeugd"
+        },
+        {
+          "start": "19:00",
+          "end": "20:00",
+          "name": "Strength & Conditioning",
+          "interest": "strength-conditioning",
+          "category": "groep"
+        }
+      ]
+    },
+    {
+      "name": "Woensdag",
+      "lessons": [
+        {
+          "start": "08:30",
+          "end": "09:30",
+          "name": "Circuit training",
+          "interest": "circuit-training",
+          "category": "groep"
+        },
+        {
+          "start": "09:30",
+          "end": "10:30",
+          "name": "Bodyshape",
+          "interest": "bodyshape",
+          "category": "groep"
+        },
+        {
+          "start": "12:00",
+          "end": "13:00",
+          "name": "Kickboksen · zaktraining",
+          "interest": "zaktraining",
+          "category": "kick"
+        },
+        {
+          "start": "17:00",
+          "end": "18:00",
+          "name": "Jeugd kickboksen",
+          "interest": "jeugd-kickboksen",
+          "category": "jeugd"
+        },
+        {
+          "start": "18:00",
+          "end": "19:00",
+          "name": "Jeugd Strength & Conditioning",
+          "interest": "jeugd-strength",
+          "category": "jeugd"
+        },
+        {
+          "start": "19:00",
+          "end": "20:00",
+          "name": "Strength & Conditioning",
+          "interest": "strength-conditioning",
+          "category": "groep"
+        },
+        {
+          "start": "19:30",
+          "end": "20:30",
+          "name": "Circuit training",
+          "interest": "circuit-training",
+          "category": "groep"
+        },
+        {
+          "start": "20:00",
+          "end": "21:00",
+          "name": "Zumba",
+          "interest": "zumba",
+          "category": "groep"
+        },
+        {
+          "start": "20:00",
+          "end": "21:00",
+          "name": "Spinning",
+          "interest": "spinning",
+          "category": "groep"
+        },
+        {
+          "start": "20:30",
+          "end": "21:30",
+          "name": "Kickboksen · zaktraining",
+          "interest": "zaktraining",
+          "category": "kick"
+        }
+      ]
+    },
+    {
+      "name": "Donderdag",
+      "lessons": [
+        {
+          "start": "08:30",
+          "end": "09:30",
+          "name": "Circuit training",
+          "interest": "circuit-training",
+          "category": "groep"
+        },
+        {
+          "start": "12:00",
+          "end": "13:00",
+          "name": "Kickboksen · zaktraining",
+          "interest": "zaktraining",
+          "category": "kick"
+        },
+        {
+          "start": "18:00",
+          "end": "19:00",
+          "name": "Jeugd Strength & Conditioning",
+          "interest": "jeugd-strength",
+          "category": "jeugd"
+        },
+        {
+          "start": "19:00",
+          "end": "20:00",
+          "name": "Bodypump",
+          "interest": "bodypump",
+          "category": "groep"
+        },
+        {
+          "start": "19:00",
+          "end": "20:00",
+          "name": "Circuit training",
+          "interest": "circuit-training",
+          "category": "groep"
+        },
+        {
+          "start": "20:00",
+          "end": "21:00",
+          "name": "Kickboksen · zaktraining",
+          "interest": "zaktraining",
+          "category": "kick"
+        },
+        {
+          "start": "20:00",
+          "end": "21:00",
+          "name": "Strength & Conditioning",
+          "interest": "strength-conditioning",
+          "category": "groep"
+        }
+      ]
+    },
+    {
+      "name": "Vrijdag",
+      "lessons": [
+        {
+          "start": "09:30",
+          "end": "10:30",
+          "name": "Kickboksen · zaktraining",
+          "interest": "zaktraining",
+          "category": "kick"
+        },
+        {
+          "start": "18:00",
+          "end": "19:00",
+          "name": "Kickboksen voor de kleintjes",
+          "interest": "jeugd-kickboksen",
+          "category": "jeugd"
+        },
+        {
+          "start": "20:00",
+          "end": "21:30",
+          "name": "Kickboksen",
+          "interest": "kickboksen",
+          "category": "kick"
+        }
+      ]
+    },
+    {
+      "name": "Zaterdag",
+      "lessons": [
+        {
+          "start": "10:00",
+          "end": "11:00",
+          "name": "Strength & Conditioning",
+          "interest": "strength-conditioning",
+          "category": "groep"
+        }
+      ]
+    },
+    {
+      "name": "Zondag",
+      "lessons": [
+        {
+          "start": "10:00",
+          "end": "11:00",
+          "name": "Strength & Conditioning",
+          "interest": "strength-conditioning",
+          "category": "groep"
+        }
+      ]
+    }
+  ]
+}

@@ -37,5 +37,12 @@ for key in interests:
  if key!='ontdekken':
   text=(root/f'aanbod/{key}/index.html').read_text()
   if f'/gratis-proefles/?interest={key}' not in text:errors.append(f'{key}: voorkeur gaat niet mee')
+club=json.loads((root/'club-data.json').read_text())
+if [len(day['lessons']) for day in club['days']] != [10,5,10,7,3,1,1]:errors.append('Rooster wijkt af van de 37 gecontroleerde lesmomenten')
+for day in club['days']:
+ for lesson in day['lessons']:
+  if lesson['interest'] not in interests:errors.append('Onbekende proeflesvoorkeur: '+lesson['interest'])
+  if lesson['start']>=lesson['end']:errors.append('Onjuiste lestijd: '+str(lesson))
+  if lesson['category'] not in ['jeugd','groep','kick']:errors.append('Onbekend lesfilter')
 if errors:raise SystemExit('\n'.join(errors))
 print(f'{len(pages)} HTML-pagina’s, interne bestanden, proeflesvelden en {len(interests)-1} trainingsvoorkeuren gecontroleerd.')
