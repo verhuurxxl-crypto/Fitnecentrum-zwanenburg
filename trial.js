@@ -21,12 +21,14 @@
       button.disabled = false;
     })
     .catch(() => {
+      form.hidden = true;
       availability.replaceChildren();
-      availability.append('Online aanvragen is binnenkort beschikbaar. Bel ');
+      availability.append('Zin om te komen trainen? Spreek je gratis proeftraining direct met ons af. ');
       const phone = document.createElement('a');
       phone.href = 'tel:+31204978616';
-      phone.textContent = '020 497 8616';
-      availability.append(phone, ' om je gratis proeftraining af te spreken.');
+      phone.className = 'button';
+      phone.textContent = 'Bel 020 497 8616 ↗';
+      availability.append(phone);
     });
 
   form.addEventListener('submit', async event => {

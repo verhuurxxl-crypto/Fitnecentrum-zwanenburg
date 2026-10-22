@@ -44,3 +44,11 @@ Er zijn geen DNS-, domein- of zakelijke e-mailinstellingen gewijzigd. Deze repos
 ## Checks
 
 `python3 tests/check-site.py`, `node --check trial.js`, PHP-syntaxcontrole en `php tests/trial.php`. Er is geen PHP-runtime in de lokale werkruimte; GitHub Actions voert PHP-controles uit. Live-mailtest en visuele iPhone/Safari-controle moeten nog volgen. Het beschikbare lokale previewplatform was niet beschikbaar, dus browser-QA is niet als geslaagd aangemerkt.
+
+## Afwerking 22 oktober 2026
+
+Nieuwe praktische pagina voor persoonlijk inschrijven en opzeggen, veelgestelde vragen, duidelijke footer en bijgewerkte trainingsintro’s. Een schriftelijke opzegroute blijft beschikbaar. Het formulier toont zolang de mailroute uit staat een duidelijke belknop in plaats van invulvelden met een onbruikbare verzendknop.
+
+De oude clubwebsite noemt op verschillende pagina’s €72,50 en €72,90 voor een gezin, en spreekt zichzelf tegen over €15 inschrijfkosten of terugbetaalbare pasborg. Deze gegevens zijn daarom niet als definitieve nieuwe afspraken vastgesteld. Laat de eigenaar dit bevestigen.
+
+Aanvullende CI: vier mobiele breedtes (320/375/390/430) en desktop in Chromium en WebKit, menu openen/sluiten/scrollherstel, ontbrekende bestanden en frontendfouten/herhalen met een uitsluitend lokaal onderschept mailtransport. Screenshots en resultaten staan bij de GitHub Actions-run. Dit vervangt geen echte iPhone-test of gecontroleerde inboxontvangst.
