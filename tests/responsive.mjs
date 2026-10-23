@@ -45,6 +45,13 @@ for (const [engine,type] of Object.entries({chromium,webkit})) {
       }
       assert.notEqual(await page.locator('.fcz-hero h1 br').evaluate(e=>getComputedStyle(e).display),'none',label+': bewuste kopindeling');
      }
+     if(route==='/'){
+      assert.match(await page.locator('h1').textContent(),/FITNESS IN.*ZWANENBURG/);
+      assert.equal(await page.locator('.motion-ribbon,.choice-guide,.fcz-membership-callout').count(),0);
+      await page.locator('.home-extra-prices summary').click();
+      assert.equal(await page.locator('.home-extra-prices .club-extra-prices').isVisible(),true);
+      await page.locator('.home-extra-prices summary').click();
+     }
      if(route==='/voorwaarden/'){
       assert.equal(await page.locator('.terms-section').count(),18,label+': volledige voorwaarden');
       assert.match(await page.locator('.terms-status').textContent(),/Concept ter controle/);

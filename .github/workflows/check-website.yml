@@ -21,6 +21,8 @@ jobs:
       - name: HTML en bezoekersroute controleren
         run: |
           python3 tests/check-site.py
+          python3 tests/check-seo.py
+          python3 tests/sync-seo.py --check
           python3 tests/sync-club.py --check
           python3 tests/sync-heroes.py --check
           python3 tests/sync-terms.py --check
